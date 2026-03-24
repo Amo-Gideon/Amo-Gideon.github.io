@@ -11,7 +11,7 @@ Building **Personalized Agentic RAG systems** that combine autonomous AI agent d
 - All projects are hosted on my [GitHub](https://github.com/Amo-Gideon).
 
 ## 🌐 Website URL
-https://amo-gideon.github.io (replace with YOUR actual GitHub.io URL)
+https://amoappau.github.io
 
 ## 🛠️ Tech Stack (Website)
 - HTML/CSS, Bootstrap 5, Font Awesome (responsive, modern UI)
