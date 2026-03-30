@@ -15,45 +15,50 @@
         .contact-link:hover { text-decoration: underline; }
         .project-tag { background-color: #e9ecef; padding: 3px 8px; border-radius: 4px; font-size: 0.85rem; margin-right: 5px; }
         .research-focus { color: #0d6efd; font-weight: 600; }
+        .cert-badge { background-color: #0d6efd; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
+        .intern-badge { background-color: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
+        .wip-badge { background-color: #ffc107; color: #212529; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
     </style>
 </head>
 <body class="py-5">
     <div class="container">
-        <!-- Header / About Me -->
+        <!-- Header / About Me (UPDATED: Added Multimodal AI focus) -->
         <header class="text-center mb-5">
             <h1 class="display-6 fw-bold">Appau Gideon Kofi Amo</h1>
-            <p class="lead">AI/ML Researcher | Software Engineer | Focus on <span class="research-focus">Agentic RAG & Personalized Retrieval-Augmented Generation</span></p>
-            <p class="text-muted">Suzhou, China | Pursuing MS in Software Engineering (USTC)</p>
+            <p class="lead">AI/ML Researcher | Software Engineer | Focus on <span class="research-focus">Agentic RAG, Personalized RAG & Multimodal AI</span></p>
+            <p class="text-muted">Suzhou, China | Pursuing MS in Software Engineering (USTC) | Anticipated Jul 2027</p>
             <!-- Contact Links -->
-            <div class="d-flex justify-content-center gap-4 mt-3">
+            <div class="d-flex justify-content-center flex-wrap gap-4 mt-3">
                 <a href="mailto:gideonamoappau@mail.ustc.edu.cn" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
                 <a href="https://github.com/Amo-Gideon" class="contact-link" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://linkedin.com/in/gideon-appau-022312212/" class="contact-link" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="contact-link" target="_blank"><i class="fab fa-github"></i> Future ML Internship</a>
                 <a href="tel:+8613285519128" class="contact-link"><i class="fas fa-phone"></i> +86 13285519128</a>
             </div>
         </header>
 
-        <!-- Research Focus (Highlight Agentic RAG) -->
+        <!-- Research Focus (UPDATED: Added Multimodal + NVIDIA RAG cert context) -->
         <section class="mb-5">
-            <h2 class="h4 section-title">Research Focus</h2>
+            <h2 class="h4 section-title">Research & Skill Focus</h2>
             <div class="card p-4">
                 <p class="mb-0">
-                    Currently researching and building <strong>Personalized Agentic RAG systems</strong>, extending vanilla RAG with autonomous AI agent decision-making, user preference modeling, and iterative retrieval/self-correction. 
-                    Leveraging LangChain, LLMs, vector databases (FAISS/Chroma), and agent frameworks (AutoGen) to build research prototypes for user-centric AI information retrieval.
+                    Researching and building <strong>Personalized Agentic RAG systems</strong> (NVIDIA RAG Certified <span class="cert-badge">NEW</span>) — extending vanilla RAG with autonomous AI agent decision-making, user preference modeling, and iterative retrieval/self-correction. 
+                    Actively learning <strong>Multimodal AI/ML</strong> <span class="wip-badge">IN PROGRESS</span> (cross-modal processing, multimodal LLMs) to expand cross-modal understanding and model integration.
+                    Leveraging LangChain/LangGraph, LLMs, vector databases (FAISS/Chroma), and agent frameworks (AutoGen) for user-centric AI information retrieval and real-world ML solutions.
                 </p>
             </div>
         </section>
 
-        <!-- Research & Projects (Core Section) -->
+        <!-- Research & Projects (COMPLETELY UPDATED: Added Future Interns + reordered for priority) -->
         <section class="mb-5">
             <h2 class="h4 section-title">Research & Projects</h2>
             <div class="row gap-4">
-                <!-- Personalized Agentic RAG (NEW Research Prototype - YOUR FOCUS) -->
+                <!-- Personalized Agentic RAG Prototype (Top Priority) -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Personalized Agentic RAG Prototype</h3>
-                        <p class="text-muted small">2025 | Research in Progress</p>
-                        <p>Building an agentic RAG system that adapts to user preferences (e.g., expertise level) with autonomous retrieval decision-making, iterative self-correction, and user memory integration.</p>
+                        <p class="text-muted small">2025 | Research in Progress <span class="wip-badge">WIP</span></p>
+                        <p>Building an adaptive agentic RAG system that tailors retrieval to user expertise levels with autonomous decision-making, iterative self-correction, and user memory integration for domain-specific knowledge bases.</p>
                         <div class="mt-2">
                             <span class="project-tag">LangGraph</span>
                             <span class="project-tag">LangChain</span>
@@ -63,12 +68,27 @@
                         </div>
                     </div>
                 </div>
-                <!-- Campus Knowledge Base RAG Chatbot (Resume Project) -->
+                <!-- Future Interns - Sales & Demand Forecasting (NEW Internship Project) -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 p-4">
+                        <h3 class="h5 fw-bold">Sales & Demand Forecasting</h3>
+                        <p class="text-muted small">2025 | Future Interns ML Internship <span class="intern-badge">COMPLETED</span> | <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="contact-link" target="_blank">GitHub Repo</a></p>
+                        <p>End-to-end ML project for business sales forecasting (Superstore dataset) — predicted 6 months of sales to inform inventory/staffing/cash flow planning. Executed full pipeline: data cleaning → feature engineering → modeling → visualization → business insights.</p>
+                        <div class="mt-2">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">scikit-learn</span>
+                            <span class="project-tag">Pandas</span>
+                            <span class="project-tag">Matplotlib</span>
+                            <span class="project-tag">Time-Series</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campus Knowledge Base RAG Chatbot (RAG Focus) -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Campus Knowledge Base RAG Chatbot</h3>
                         <p class="text-muted small">2025 | <a href="https://github.com/Amo-Gideon" class="contact-link" target="_blank">GitHub</a></p>
-                        <p>Developed a RAG prototype chatbot for real-time campus queries with Ollama embeddings, a Chroma vector database for efficient knowledge retrieval, and an interactive Gradio UI.</p>
+                        <p>Developed a RAG prototype chatbot for real-time campus queries with Ollama embeddings, a Chroma vector database for efficient semantic retrieval, and an intuitive Gradio UI for end-user interaction.</p>
                         <div class="mt-2">
                             <span class="project-tag">LangChain</span>
                             <span class="project-tag">Ollama</span>
@@ -78,12 +98,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- AI Study Coach (Resume Project) -->
+                <!-- AI Study Coach (Multi-Agent AI) -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">AI Study Coach</h3>
                         <p class="text-muted small">2025 | <a href="https://github.com/Amo-Gideon" class="contact-link" target="_blank">GitHub</a></p>
-                        <p>AI-powered learning assistant with multi-agent collaboration (Instructor, Knowledge, Quiz Master) using AutoGen Agents and Gemini 2.0 Flash—built a Gradio interface for interactive learning.</p>
+                        <p>AI-powered learning assistant with 4 specialized AutoGen agents (Instructor, Knowledge, Quiz Master, Welcome) and Gemini 2.0 Flash — built a real-time Gradio interface for personalized study/quizzes/motivation.</p>
                         <div class="mt-2">
                             <span class="project-tag">AutoGen</span>
                             <span class="project-tag">Gradio</span>
@@ -92,24 +112,58 @@
                         </div>
                     </div>
                 </div>
-                <!-- Predictive House Price Modeling (Resume Project) -->
+                <!-- Predictive House Price Modeling (ML Regression) -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Predictive House Price Modeling</h3>
                         <p class="text-muted small">2025</p>
-                        <p>Trained multiple regression models for housing price prediction with an R² score of 0.89, leveraged scikit-learn for model training and Pandas/NumPy for data preprocessing.</p>
+                        <p>Trained and optimized multiple regression models for residential housing price prediction — achieved an R² score of 0.89 via rigorous feature engineering, model tuning, and cross-validation.</p>
                         <div class="mt-2">
                             <span class="project-tag">scikit-learn</span>
                             <span class="project-tag">Pandas</span>
                             <span class="project-tag">NumPy</span>
                             <span class="project-tag">Regression</span>
+                            <span class="project-tag">Feature Engineering</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- CNN for FashionMNIST (CV / Multimodal Foundation) -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 p-4">
+                        <h3 class="h5 fw-bold">CNN for FashionMNIST Classification</h3>
+                        <p class="text-muted small">2023 | Multimodal AI Foundation</p>
+                        <p>Implemented a custom Convolutional Neural Network for image classification — achieved ~90% accuracy on the FashionMNIST dataset via hyperparameter optimization and regularization (core CV skills for Multimodal AI).</p>
+                        <div class="mt-2">
+                            <span class="project-tag">PyTorch</span>
+                            <span class="project-tag">TorchVision</span>
+                            <span class="project-tag">CNN</span>
+                            <span class="project-tag">Image Classification</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Skills -->
+        <!-- Certifications (NEW SECTION: NVIDIA RAG + Coursera) -->
+        <section class="mb-5">
+            <h2 class="h4 section-title">Certifications</h2>
+            <div class="card p-4">
+                <div class="row gap-3">
+                    <div class="col-12 col-md-5">
+                        <h6 class="fw-bold">NVIDIA Certificate of Competency <span class="cert-badge">RAG</span></h6>
+                        <p class="mb-1 small">Large Language Model - RAG Agent Fundamentals</p>
+                        <p class="text-muted small mb-0">Issue Date: March 30, 2026 | Certification ID: zp5bwsp3SN6sCsw4f5K8iQ</p>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h6 class="fw-bold">DeepLearning.AI (Coursera)</h6>
+                        <p class="mb-1 small">Advanced Learning Algorithms | Jul 2025</p>
+                        <p class="text-muted small mb-0">Supervised Machine Learning: Regression & Classification | Feb 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills (UPDATED: Added Multimodal, Time-Series, LangGraph) -->
         <section class="mb-5">
             <h2 class="h4 section-title">Technical Skills</h2>
             <div class="card p-4">
@@ -119,18 +173,24 @@
                         <p>Python, JavaScript, SQL, Java</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <h6 class="fw-bold">ML/AI & RAG</h6>
-                        <p>PyTorch, scikit-learn, LangChain, Ollama, LLMs, FAISS, Chroma, AutoGen</p>
+                        <h6 class="fw-bold">ML/AI & RAG (Core)</h6>
+                        <p>PyTorch, scikit-learn, LangChain/LangGraph, Ollama, LLMs, FAISS, Chroma, AutoGen, Gemini 2.0, RAG Agents, Time-Series Forecasting, CNNs</p>
                     </div>
                     <div class="col-12 col-md-4">
-                        <h6 class="fw-bold">Web & Tools</h6>
-                        <p>Flask, REST APIs, HTML/CSS, Bootstrap, MySQL, Git, Docker, Gradio, Linux</p>
+                        <h6 class="fw-bold">Web & Dev Tools</h6>
+                        <p>Flask, REST APIs, HTML/CSS, Bootstrap 5, MySQL, Git, Docker, Gradio, Linux, GitHub Pages, Matplotlib</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <h6 class="fw-bold">Current Learning <span class="wip-badge">IN PROGRESS</span></h6>
+                        <p>Multimodal AI/ML (cross-modal data processing, multimodal LLMs, computer vision extensions)</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education -->
+        <!-- Education (Unchanged - Retained for consistency) -->
         <section class="mb-5">
             <h2 class="h4 section-title">Education</h2>
             <div class="card p-4">
@@ -147,33 +207,47 @@
             </div>
         </section>
 
-        <!-- Professional Experience -->
+        <!-- Professional Experience (UPDATED: Added Future Interns ML Internship - TOP OF SECTION) -->
         <section>
-            <h2 class="h4 section-title">Professional Experience</h2>
+            <h2 class="h4 section-title">Professional Experience & Internships</h2>
             <div class="card p-4">
-                <div class="mb-3">
-                    <h6 class="fw-bold">IT Assistant | Akenten Appiah Menkah University | Nov 2022 – Aug 2023</h6>
+                <!-- NEW: Future Interns ML Internship -->
+                <div class="mb-4">
+                    <h6 class="fw-bold">Machine Learning Intern | Future Interns (Online) | Completed</h6>
+                    <p class="text-muted small mb-2">ML Track | CIN ID: SL24225010</p>
                     <ul class="mb-0 small">
-                        <li>Automated data workflows with Python (Pandas/NumPy), reducing processing time by 40%.</li>
-                        <li>Optimized SQL databases (5,000+ records) to improve query performance by 30%.</li>
-                        <li>Developed internal scripts for streamlined system maintenance.</li>
+                        <li>Led end-to-end sales & demand forecasting project (Superstore dataset) — predicted 6 months of future sales to inform business inventory/staffing/cash flow planning.</li>
+                        <li>Executed full ML pipeline: data cleaning, time-based feature engineering, model building, visualization, and actionable business insight generation.</li>
+                        <li>Delivered production-ready outputs: forecast CSVs, trend/seasonality visualizations, and a formal business recommendation document (GitHub: FUTURE_ML_01).</li>
+                        <li>Gained industry-style ML project management, documentation, and stakeholder alignment skills.</li>
                     </ul>
                 </div>
+                <!-- Original: IT Assistant -->
+                <div class="mb-4">
+                    <h6 class="fw-bold">IT Assistant | Akenten Appiah Menkah University | Nov 2022 – Aug 2023</h6>
+                    <ul class="mb-0 small">
+                        <li>Automated data workflows with Python (Pandas/NumPy), reducing manual processing time by 40%.</li>
+                        <li>Optimized SQL databases (5,000+ records) and improved query performance by 30%.</li>
+                        <li>Developed internal scripts to streamline system maintenance and eliminate repetitive operational tasks.</li>
+                    </ul>
+                </div>
+                <!-- Original: Web Developer Intern -->
                 <div>
                     <h6 class="fw-bold">Intern Web Developer | Amidarr A-mole | Aug 2021 – Mar 2022</h6>
                     <ul class="mb-0 small">
-                        <li>Engineered 3 full-stack web applications with Flask, JavaScript, and MySQL.</li>
-                        <li>Optimized front-end components with Bootstrap, improving UI load times by 25%.</li>
-                        <li>Collaborated on requirements gathering, coding, testing, and client feedback iterations.</li>
+                        <li>Engineered 3 full-stack web applications for business operations using Flask, JavaScript, and MySQL.</li>
+                        <li>Optimized front-end components with Bootstrap, improving UI load times by 25% and enhancing cross-device usability.</li>
+                        <li>Collaborated cross-functionally on requirements gathering, coding, testing, and client feedback iterations.</li>
+                        <li>Integrated third-party APIs (PayStack) to build secure online payment functionality for an e-commerce platform.</li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer (Updated Year) -->
     <footer class="text-center mt-5 text-muted small">
-        <p>© 2026 Appau Gideon Kofi Amo | AI/ML Research & Software Engineering</p>
+        <p>© 2026 Appau Gideon Kofi Amo | AI/ML Research & Software Engineering | NVIDIA RAG Certified</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
