@@ -18,11 +18,12 @@
         .cert-badge { background-color: #0d6efd; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
         .intern-badge { background-color: #28a745; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
         .wip-badge { background-color: #ffc107; color: #212529; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
+        .completed-badge { background-color: #198754; color: white; padding: 2px 6px; border-radius: 3px; font-size: 0.75rem; margin-left: 5px; }
     </style>
 </head>
 <body class="py-5">
     <div class="container">
-        <!-- Header / About Me (UPDATED: Added Multimodal AI focus) -->
+        <!-- Header / About Me -->
         <header class="text-center mb-5">
             <h1 class="display-6 fw-bold">Appau Gideon Kofi Amo</h1>
             <p class="lead">AI/ML Researcher | Software Engineer | Focus on <span class="research-focus">Agentic RAG, Personalized RAG & Multimodal AI</span></p>
@@ -37,7 +38,7 @@
             </div>
         </header>
 
-        <!-- Research Focus (UPDATED: Added Multimodal + NVIDIA RAG cert context) -->
+        <!-- Research Focus -->
         <section class="mb-5">
             <h2 class="h4 section-title">Research & Skill Focus</h2>
             <div class="card p-4">
@@ -49,15 +50,24 @@
             </div>
         </section>
 
-        <!-- Research & Projects (COMPLETELY UPDATED: Added Future Interns + reordered for priority) -->
+        <!-- Current Internship Status Banner -->
+        <section class="mb-5">
+            <div class="card bg-light border-primary p-4">
+                <h3 class="h5 fw-bold text-primary"><i class="fas fa-briefcase me-2"></i>Current: Future Interns ML Program</h3>
+                <p class="mb-2"><strong>Duration:</strong> March 20 – April 20, 2026 (4-week intensive) <span class="wip-badge">ONGOING</span></p>
+                <p class="mb-0 small">Delivering 3 concurrent ML projects: Sales Forecasting (Completed), Support Ticket Classification (In Progress), Resume Screening System (In Progress)</p>
+            </div>
+        </section>
+
+        <!-- Research & Projects -->
         <section class="mb-5">
             <h2 class="h4 section-title">Research & Projects</h2>
             <div class="row gap-4">
-                <!-- Personalized Agentic RAG Prototype (Top Priority) -->
+                <!-- Personalized Agentic RAG Prototype -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Personalized Agentic RAG Prototype</h3>
-                        <p class="text-muted small">2025 | Research in Progress <span class="wip-badge">WIP</span></p>
+                        <p class="text-muted small">2025 – Present <span class="wip-badge">WIP</span></p>
                         <p>Building an adaptive agentic RAG system that tailors retrieval to user expertise levels with autonomous decision-making, iterative self-correction, and user memory integration for domain-specific knowledge bases.</p>
                         <div class="mt-2">
                             <span class="project-tag">LangGraph</span>
@@ -68,11 +78,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- Future Interns - Sales & Demand Forecasting (NEW Internship Project) -->
+                <!-- Future Interns - Sales & Demand Forecasting -->
                 <div class="col-12 col-md-6">
-                    <div class="card h-100 p-4">
+                    <div class="card h-100 p-4 border-success">
                         <h3 class="h5 fw-bold">Sales & Demand Forecasting</h3>
-                        <p class="text-muted small">2025 | Future Interns ML Internship <span class="intern-badge">COMPLETED</span> | <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="contact-link" target="_blank">GitHub Repo</a></p>
+                        <p class="text-muted small">Future Interns ML Internship <span class="completed-badge">COMPLETED</span> | <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="contact-link" target="_blank">GitHub Repo</a></p>
                         <p>End-to-end ML project for business sales forecasting (Superstore dataset) — predicted 6 months of sales to inform inventory/staffing/cash flow planning. Executed full pipeline: data cleaning → feature engineering → modeling → visualization → business insights.</p>
                         <div class="mt-2">
                             <span class="project-tag">Python</span>
@@ -83,7 +93,37 @@
                         </div>
                     </div>
                 </div>
-                <!-- Campus Knowledge Base RAG Chatbot (RAG Focus) -->
+                <!-- Future Interns - Support Ticket Classification -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 p-4 border-warning">
+                        <h3 class="h5 fw-bold">Support Ticket Classification</h3>
+                        <p class="text-muted small">Future Interns ML Internship <span class="wip-badge">IN PROGRESS</span></p>
+                        <p>Building automated NLP system to categorize and route customer support tickets using BERT/DistilBERT with sentiment analysis. Implementing multi-label classification for priority routing and automated response suggestions.</p>
+                        <div class="mt-2">
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">BERT</span>
+                            <span class="project-tag">DistilBERT</span>
+                            <span class="project-tag">Transformers</span>
+                            <span class="project-tag">Sentiment Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Future Interns - Resume Screening System -->
+                <div class="col-12 col-md-6">
+                    <div class="card h-100 p-4 border-warning">
+                        <h3 class="h5 fw-bold">Resume / Candidate Screening System</h3>
+                        <p class="text-muted small">Future Interns ML Internship <span class="wip-badge">IN PROGRESS</span></p>
+                        <p>Developing AI-powered recruitment tool with spaCy/NLTK for resume parsing, LLM-based candidate-job description matching, and ranking algorithms with relevance scoring. Building end-to-end pipeline from document ingestion to shortlist generation.</p>
+                        <div class="mt-2">
+                            <span class="project-tag">spaCy</span>
+                            <span class="project-tag">NLTK</span>
+                            <span class="project-tag">LLMs</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Information Extraction</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Campus Knowledge Base RAG Chatbot -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Campus Knowledge Base RAG Chatbot</h3>
@@ -98,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- AI Study Coach (Multi-Agent AI) -->
+                <!-- AI Study Coach -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">AI Study Coach</h3>
@@ -112,7 +152,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Predictive House Price Modeling (ML Regression) -->
+                <!-- Predictive House Price Modeling -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">Predictive House Price Modeling</h3>
@@ -127,7 +167,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- CNN for FashionMNIST (CV / Multimodal Foundation) -->
+                <!-- CNN for FashionMNIST -->
                 <div class="col-12 col-md-6">
                     <div class="card h-100 p-4">
                         <h3 class="h5 fw-bold">CNN for FashionMNIST Classification</h3>
@@ -144,7 +184,7 @@
             </div>
         </section>
 
-        <!-- Certifications (NEW SECTION: NVIDIA RAG + Coursera) -->
+        <!-- Certifications -->
         <section class="mb-5">
             <h2 class="h4 section-title">Certifications</h2>
             <div class="card p-4">
@@ -152,7 +192,7 @@
                     <div class="col-12 col-md-5">
                         <h6 class="fw-bold">NVIDIA Certificate of Competency <span class="cert-badge">RAG</span></h6>
                         <p class="mb-1 small">Large Language Model - RAG Agent Fundamentals</p>
-                        <p class="text-muted small mb-0">Issue Date: March 30, 2026 | Certification ID: zp5bwsp3SN6sCsw4f5K8iQ</p>
+                        <p class="text-muted small mb-0">Issue Date: March 30, 2025 | Certification ID: zp5bwsp3SN6sCsw4f5K8iQ</p>
                     </div>
                     <div class="col-12 col-md-7">
                         <h6 class="fw-bold">DeepLearning.AI (Coursera)</h6>
@@ -163,14 +203,14 @@
             </div>
         </section>
 
-        <!-- Technical Skills (UPDATED: Added Multimodal, Time-Series, LangGraph) -->
+        <!-- Technical Skills -->
         <section class="mb-5">
             <h2 class="h4 section-title">Technical Skills</h2>
             <div class="card p-4">
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <h6 class="fw-bold">Programming</h6>
-                        <p>Python, JavaScript, SQL, Java</p>
+                        <p>Python, JavaScript, SQL, Java, Bash</p>
                     </div>
                     <div class="col-12 col-md-4">
                         <h6 class="fw-bold">ML/AI & RAG (Core)</h6>
@@ -178,11 +218,15 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <h6 class="fw-bold">Web & Dev Tools</h6>
-                        <p>Flask, REST APIs, HTML/CSS, Bootstrap 5, MySQL, Git, Docker, Gradio, Linux, GitHub Pages, Matplotlib</p>
+                        <p>Flask, REST APIs, HTML/CSS, Bootstrap 5, MySQL, Git, Docker, Gradio, Linux, GitHub Pages</p>
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
+                        <h6 class="fw-bold">NLP & LLMs</h6>
+                        <p>BERT, DistilBERT, spaCy, NLTK, Transformers, Hugging Face, Prompt Engineering</p>
+                    </div>
+                    <div class="col-12 col-md-6">
                         <h6 class="fw-bold">Current Learning <span class="wip-badge">IN PROGRESS</span></h6>
                         <p>Multimodal AI/ML (cross-modal data processing, multimodal LLMs, computer vision extensions)</p>
                     </div>
@@ -190,7 +234,7 @@
             </div>
         </section>
 
-        <!-- Education (Unchanged - Retained for consistency) -->
+        <!-- Education -->
         <section class="mb-5">
             <h2 class="h4 section-title">Education</h2>
             <div class="card p-4">
@@ -202,28 +246,27 @@
                 <div>
                     <h6 class="fw-bold">University of Education, Winneba, Ghana</h6>
                     <p class="mb-1">Bachelor of Science in Information Technology Education | Aug 2018 – Oct 2022</p>
-                    <p class="mb-0 text-muted">CGPA: 3.61/4.0 (Top 10%)</p>
+                    <p class="mb-0 text-muted">CGPA: 3.61/4.0 (First Class Honours, Top 10%)</p>
                 </div>
             </div>
         </section>
 
-        <!-- Professional Experience (UPDATED: Added Future Interns ML Internship - TOP OF SECTION) -->
+        <!-- Professional Experience -->
         <section>
             <h2 class="h4 section-title">Professional Experience & Internships</h2>
             <div class="card p-4">
-                <!-- NEW: Future Interns ML Internship -->
-                <div class="mb-4">
-                    <h6 class="fw-bold">Machine Learning Intern | Future Interns (Online) | Completed</h6>
-                    <p class="text-muted small mb-2">ML Track | CIN ID: SL24225010</p>
+                <!-- Future Interns ML Internship -->
+                <div class="mb-4 border-bottom pb-3">
+                    <h6 class="fw-bold">Machine Learning Intern | Future Interns (Remote) | March 20 – April 20, 2026</h6>
+                    <p class="text-muted small mb-2">ML Track | CIN ID: SL24225010 | 4-Week Intensive Program</p>
                     <ul class="mb-0 small">
-                        <li>Led end-to-end sales & demand forecasting project (Superstore dataset) — predicted 6 months of future sales to inform business inventory/staffing/cash flow planning.</li>
-                        <li>Executed full ML pipeline: data cleaning, time-based feature engineering, model building, visualization, and actionable business insight generation.</li>
-                        <li>Delivered production-ready outputs: forecast CSVs, trend/seasonality visualizations, and a formal business recommendation document (GitHub: FUTURE_ML_01).</li>
-                        <li>Gained industry-style ML project management, documentation, and stakeholder alignment skills.</li>
+                        <li><strong>Sales & Demand Forecasting (Completed):</strong> Led end-to-end time-series forecasting project using Superstore dataset — predicted 6 months of sales for inventory/staffing/cash flow planning. Executed full ML pipeline: data cleaning → feature engineering → model training → visualization → business insight generation. Delivered production-ready forecast CSVs, trend/seasonality charts, and strategic recommendations. <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="contact-link" target="_blank">GitHub: FUTURE_ML_01</a></li>
+                        <li><strong>Support Ticket Classification (In Progress):</strong> Developing automated NLP system to categorize and route customer support tickets using BERT/DistilBERT with sentiment analysis for priority routing and automated response suggestions.</li>
+                        <li><strong>Resume Screening System (In Progress):</strong> Building AI-powered recruitment tool with spaCy/NLTK for resume parsing, LLM-based candidate-job description matching, and ranking algorithms with relevance scoring.</li>
                     </ul>
                 </div>
-                <!-- Original: IT Assistant -->
-                <div class="mb-4">
+                <!-- IT Assistant -->
+                <div class="mb-4 border-bottom pb-3">
                     <h6 class="fw-bold">IT Assistant | Akenten Appiah Menkah University | Nov 2022 – Aug 2023</h6>
                     <ul class="mb-0 small">
                         <li>Automated data workflows with Python (Pandas/NumPy), reducing manual processing time by 40%.</li>
@@ -231,21 +274,21 @@
                         <li>Developed internal scripts to streamline system maintenance and eliminate repetitive operational tasks.</li>
                     </ul>
                 </div>
-                <!-- Original: Web Developer Intern -->
+                <!-- Web Developer Intern -->
                 <div>
-                    <h6 class="fw-bold">Intern Web Developer | Amidarr A-mole | Aug 2021 – Mar 2022</h6>
+                    <h6 class="fw-bold">Full-Stack Web Developer Intern | Amidarr A-mole | Aug 2021 – Mar 2022</h6>
                     <ul class="mb-0 small">
                         <li>Engineered 3 full-stack web applications for business operations using Flask, JavaScript, and MySQL.</li>
-                        <li>Optimized front-end components with Bootstrap, improving UI load times by 25% and enhancing cross-device usability.</li>
-                        <li>Collaborated cross-functionally on requirements gathering, coding, testing, and client feedback iterations.</li>
-                        <li>Integrated third-party APIs (PayStack) to build secure online payment functionality for an e-commerce platform.</li>
+                        <li>Optimized front-end performance with Bootstrap, improving UI load times by 25% and enhancing cross-device usability.</li>
+                        <li>Integrated PayStack API for secure payment processing on e-commerce platform.</li>
+                        <li>Collaborated cross-functionally on requirements gathering, testing, and client feedback iterations.</li>
                     </ul>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- Footer (Updated Year) -->
+    <!-- Footer -->
     <footer class="text-center mt-5 text-muted small">
         <p>© 2026 Appau Gideon Kofi Amo | AI/ML Research & Software Engineering | NVIDIA RAG Certified</p>
     </footer>
