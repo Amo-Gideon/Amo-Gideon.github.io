@@ -4,149 +4,256 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appau Gideon Kofi Amo</title>
-
 <style>
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    max-width: 850px;
-    margin: 40px auto;
-    line-height: 1.7;
-    color: #222;
-    padding: 0 15px;
-}
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-h1 {
-    font-size: 28px;
-    margin-bottom: 5px;
-}
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 0 20px;
+        line-height: 1.6;
+        color: #111;
+        background-color: #fff;
+    }
 
-h2 {
-    font-size: 20px;
-    margin-top: 35px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
-}
+    /* Header Name */
+    h1 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #222;
+    }
 
-a {
-    color: #0056b3;
-    text-decoration: none;
-}
+    /* Section Titles */
+    h2 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 30px;
+        margin-bottom: 12px;
+        color: #222;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    /* Links */
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
 
-.small {
-    color: #666;
-}
+    a:hover {
+        text-decoration: underline;
+    }
 
-.section {
-    margin-top: 25px;
-}
+    /* Contact Bar */
+    .contacts {
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    .contacts a {
+        margin-right: 16px;
+    }
+
+    /* Section Entry Layout */
+    .entry {
+        margin-bottom: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    .entry .title {
+        font-weight: 500;
+        flex: 1;
+    }
+
+    .entry .date {
+        font-size: 14px;
+        color: #555;
+        white-space: nowrap;
+    }
+
+    .entry .info {
+        width: 100%;
+        font-size: 15px;
+        color: #333;
+    }
+
+    .entry .tech {
+        font-style: italic;
+        color: #444;
+    }
+
+    /* Lists */
+    ul {
+        padding-left: 22px;
+        margin-top: 4px;
+        font-size: 15px;
+    }
+
+    li {
+        margin-bottom: 3px;
+    }
+
+    /* Research Interests Paragraph */
+    .intro {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    /* Skills & Certificates */
+    .skills p, .certs p {
+        font-size: 15px;
+        margin-bottom: 6px;
+    }
 </style>
 </head>
 
 <body>
 
+<!-- ==================== HEADER ==================== -->
 <h1>Appau Gideon Kofi Amo</h1>
+<div class="contacts">
+    <a href="mailto:gideonamoappau@mail.ustc.edu.cn">Email</a>
+    <a href="https://amo-gideon.github.io">Website</a>
+    <a href="https://github.com/Amo-Gideon">GitHub</a>
+    <a href="https://linkedin.com/in/gideon-appau-022312212/">LinkedIn</a>
+    <a href="https://x.com/AmoAppau">X (Twitter)</a>
+</div>
 
-<p>
-AI/ML Researcher focused on Agentic Systems, Retrieval-Augmented Generation (RAG), and Multimodal AI.
+<!-- ==================== RESEARCH INTERESTS ==================== -->
+<h2>Research Interests</h2>
+<p class="intro">
+    Agentic AI Systems, Retrieval-Augmented Generation (RAG), Multimodal Learning, Memory-Augmented Models, Long-Tailed Learning, Transformer Architectures
+</p>
+<p class="intro">
+    I am interested in building intelligent systems that integrate retrieval, reasoning, and adaptive memory. My current work focuses on personalized agentic RAG systems, extending traditional retrieval pipelines with autonomous decision-making, iterative self-correction, and user-aware retrieval strategies.
 </p>
 
-<p>
-I build intelligent systems that integrate retrieval, reasoning, and adaptive memory.
-</p>
-
-<p>
-<a href="mailto:gideonamoappau@mail.ustc.edu.cn">Email</a> /
-<a href="https://github.com/Amo-Gideon">GitHub</a> /
-<a href="https://linkedin.com/in/gideon-appau-022312212/">LinkedIn</a> /
-<a href="https://x.com/AmoAppau">Twitter (X)</a>
-</p>
-
-<!-- ABOUT -->
-<h2>About</h2>
-<p>
-I am a Master's student at the University of Science and Technology of China (USTC), working on intelligent systems that combine retrieval, reasoning, and user adaptation. My current focus is on Personalized Agentic RAG systems, extending traditional retrieval pipelines with autonomous decision-making and iterative self-correction.
-</p>
-
-<!-- RESEARCH -->
-<h2>Research</h2>
-
-<p>
-<strong>Personalized Agentic RAG</strong><br>
-Designing adaptive retrieval systems with memory, user modeling, and iterative reasoning.
-</p>
-
-<p>
-<strong>Multimodal AI</strong><br>
-Exploring cross-modal learning and integration of vision-language models.
-</p>
-
-<p>
-<strong>Agentic Systems</strong><br>
-Building autonomous AI agents capable of planning, reasoning, and self-correction.
-</p>
-
-<!-- PROJECTS -->
-<h2>Selected Projects</h2>
-
-<p>
-<strong>Personalized Agentic RAG System</strong> (2025–Present)<br>
-Designing a memory-augmented RAG system with adaptive retrieval and iterative reasoning.<br>
-<a href="#">[Code Coming Soon]</a>
-</p>
-
-<p>
-<strong>Campus Knowledge Base RAG Chatbot</strong> (2025)<br>
-Built a semantic retrieval system using vector databases for domain-specific question answering.<br>
-<a href="https://github.com/Amo-Gideon">[GitHub]</a>
-</p>
-
-<p>
-<strong>Machine Learning Projects (Future Interns)</strong> (2026)<br>
-End-to-end ML pipelines for forecasting, NLP classification, and resume screening.<br>
-<a href="https://github.com/Amo-Gideon/FUTURE_ML_01">[Forecasting]</a>
-<a href="https://github.com/Amo-Gideon/FUTURE_ML_02">[NLP]</a>
-<a href="https://github.com/Amo-Gideon/FUTURE_ML_03">[Resume AI]</a>
-</p>
-
-<p>
-<strong>AI Study Coach (Multi-Agent System)</strong> (2025)<br>
-Multi-agent system for personalized learning using LLM-based agents.<br>
-<a href="https://github.com/Amo-Gideon">[GitHub]</a>
-</p>
-
-<!-- PUBLICATIONS -->
-<h2>Publications</h2>
-<p class="small">Coming soon.</p>
-
-<!-- EXPERIENCE -->
-<h2>Experience</h2>
-
-<p>
-<strong>Machine Learning Intern — Future Interns</strong> (2026)<br>
-Worked on forecasting and NLP systems using real-world datasets.
-</p>
-
-<p>
-<strong>IT Assistant — AAMUSTED</strong> (2022–2023)<br>
-Automated workflows and optimized databases using Python and SQL.
-</p>
-
-<!-- EDUCATION -->
+<!-- ==================== EDUCATION ==================== -->
 <h2>Education</h2>
 
-<p>
-<strong>University of Science and Technology of China</strong><br>
-M.S. Software Engineering (AI/ML), Expected 2027
-</p>
+<div class="entry">
+    <div class="title">University of Science and Technology of China (USTC), Suzhou, China</div>
+    <div class="date">Expected July 2027</div>
+    <div class="info">M.S. in Software Engineering (AI/ML) | CGPA: 3.06/4.3</div>
+</div>
 
-<p>
-<strong>University of Education, Winneba</strong><br>
-B.Sc. Information Technology Education (First Class Honours)
-</p>
+<div class="entry">
+    <div class="title">University of Education, Winneba, Ghana</div>
+    <div class="date">2018 – 2022</div>
+    <div class="info">B.Sc. in Information Technology Education | CGPA: 3.61/4.0 (First Class Honors, Top 10%)</div>
+</div>
+
+<!-- ==================== SELECTED RESEARCH & PROJECTS ==================== -->
+<h2>Selected Research & Projects</h2>
+
+<div class="entry">
+    <div class="title">Personalized Agentic RAG System</div>
+    <div class="date">2025 – Present</div>
+    <div class="info tech">LangGraph, LangChain, FAISS, LLMs</div>
+    <ul>
+        <li>Designing a memory-augmented agentic RAG system with adaptive retrieval and iterative reasoning.</li>
+        <li>Incorporating user modeling, confidence estimation, and self-correction loops in LLM pipelines.</li>
+        <li>Investigating long-context reasoning and uncertainty handling in autonomous AI systems.</li>
+    </ul>
+</div>
+
+<div class="entry">
+    <div class="title">Campus Knowledge Base RAG Chatbot</div>
+    <div class="date">2025</div>
+    <div class="info tech">LangChain, Ollama, Chroma</div>
+    <ul>
+        <li>Built a semantic retrieval system using vector databases for domain-specific question answering.</li>
+        <li>Designed evaluation pipelines for assessing embedding quality and retrieval performance.</li>
+    </ul>
+</div>
+
+<div class="entry">
+    <div class="title">Machine Learning Projects (Future Interns Program)</div>
+    <div class="date">2026</div>
+    <div class="info tech">
+        Python, scikit-learn, Transformers |
+        <a href="https://github.com/Amo-Gideon/FUTURE_ML_01">FUTURE_ML_01</a> |
+        <a href="https://github.com/Amo-Gideon/FUTURE_ML_02">FUTURE_ML_02</a> |
+        <a href="https://github.com/Amo-Gideon/FUTURE_ML_03">FUTURE_ML_03</a>
+    </div>
+    <ul>
+        <li>Developed end-to-end machine learning pipelines for time-series forecasting and NLP tasks.</li>
+        <li>Applied transformer-based models (BERT/DistilBERT) for classification and sentiment analysis.</li>
+        <li>Built candidate ranking and resume screening systems using NLP and LLM-based approaches.</li>
+    </ul>
+</div>
+
+<div class="entry">
+    <div class="title">AI Study Coach (Multi-Agent System)</div>
+    <div class="date">2025</div>
+    <div class="info tech">AutoGen, multi-agent systems</div>
+    <ul>
+        <li>Developed a multi-agent AI system with specialized roles for personalized learning assistance.</li>
+        <li>Designed real-time interaction pipelines using LLM-based agents.</li>
+    </ul>
+</div>
+
+<div class="entry">
+    <div class="title">CNN for Fashion-MNIST Classification</div>
+    <div class="date">2025</div>
+    <div class="info tech">PyTorch</div>
+    <ul>
+        <li>Implemented a convolutional neural network achieving ~90% classification accuracy.</li>
+    </ul>
+</div>
+
+<!-- ==================== RESEARCH DIRECTION ==================== -->
+<h2>Research Direction</h2>
+<ul>
+    <li>Exploring agent-based learning systems under uncertainty and long-tailed distributions.</li>
+    <li>Investigating the integration of reinforcement learning with retrieval-augmented systems.</li>
+</ul>
+
+<!-- ==================== EXPERIENCE ==================== -->
+<h2>Experience</h2>
+
+<div class="entry">
+    <div class="title">Machine Learning Intern, Future Interns (Remote)</div>
+    <div class="date">Mar 2026 – Apr 2026</div>
+    <ul>
+        <li>Developed machine learning pipelines for forecasting and NLP-based classification tasks.</li>
+        <li>Applied transformer-based models for real-world text analysis and predictive modeling.</li>
+    </ul>
+</div>
+
+<div class="entry">
+    <div class="title">IT Assistant, Akenten Appiah Menkah University, Ghana</div>
+    <div class="date">Nov 2022 – Aug 2023</div>
+    <ul>
+        <li>Automated data workflows using Python, reducing processing time by 40%.</li>
+        <li>Managed SQL databases (5,000+ records) and optimized query performance.</li>
+    </ul>
+</div>
+
+<!-- ==================== TECHNICAL SKILLS ==================== -->
+<h2>Technical Skills</h2>
+<div class="skills">
+    <p><strong>Languages:</strong> Python, JavaScript, SQL, Java, Bash</p>
+    <p><strong>Machine Learning:</strong> PyTorch, scikit-learn, Transformers</p>
+    <p><strong>LLM Systems:</strong> LangChain, LangGraph, AutoGen, FAISS, Chroma, RAG</p>
+    <p><strong>NLP:</strong> BERT, DistilBERT, spaCy, NLTK</p>
+    <p><strong>Tools:</strong> Git, Docker, Linux, Gradio</p>
+</div>
+
+<!-- ==================== CERTIFICATIONS ==================== -->
+<h2>Certifications</h2>
+<div class="certs">
+    <p>NVIDIA – LLM RAG Agent Fundamentals (2025)</p>
+    <p>DeepLearning.AI – Advanced Learning Algorithms (2025)</p>
+    <p>DeepLearning.AI – Supervised Machine Learning (2025)</p>
+</div>
 
 </body>
 </html>
