@@ -1,259 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appau Gideon Kofi Amo</title>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appau Gideon Kofi Amo | AI/ML Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2c5282;
+            --accent: #3182ce;
+            --text: #2d3748;
+            --text-light: #718096;
+            --bg: #ffffff;
+            --bg-alt: #f7fafc;
+            --border: #e2e8f0;
+        }
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 0 20px;
-        line-height: 1.6;
-        color: #111;
-        background-color: #fff;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Header Name */
-    h1 {
-        font-size: 26px;
-        font-weight: 600;
-        margin-bottom: 8px;
-        color: #222;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+        }
 
-    /* Section Titles */
-    h2 {
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 30px;
-        margin-bottom: 12px;
-        color: #222;
-    }
+        /* Header / Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
 
-    /* Links */
-    a {
-        color: #0066cc;
-        text-decoration: none;
-    }
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-    a:hover {
-        text-decoration: underline;
-    }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            background: #e2e8f0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    /* Contact Bar */
-    .contacts {
-        margin-bottom: 25px;
-        font-size: 15px;
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
 
-    .contacts a {
-        margin-right: 16px;
-    }
+        .hero .tagline {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
 
-    /* Section Entry Layout */
-    .entry {
-        margin-bottom: 16px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: baseline;
-    }
+        .hero .location {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
 
-    .entry .title {
-        font-weight: 500;
-        flex: 1;
-    }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
 
-    .entry .date {
-        font-size: 14px;
-        color: #555;
-        white-space: nowrap;
-    }
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: transform 0.2s, opacity 0.2s;
+            opacity: 0.85;
+        }
 
-    .entry .info {
-        width: 100%;
-        font-size: 15px;
-        color: #333;
-    }
+        .social-links a:hover {
+            transform: translateY(-3px);
+            opacity: 1;
+        }
 
-    .entry .tech {
-        font-style: italic;
-        color: #444;
-    }
+        .btn {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background: rgba(255,255,255,0.15);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
 
-    /* Lists */
-    ul {
-        padding-left: 22px;
-        margin-top: 4px;
-        font-size: 15px;
-    }
+        .btn:hover {
+            background: rgba(255,255,255,0.25);
+        }
 
-    li {
-        margin-bottom: 3px;
-    }
+        /* Navigation */
+        nav {
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-    /* Research Interests Paragraph */
-    .intro {
-        font-size: 15px;
-        margin-bottom: 10px;
-    }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            flex-wrap: wrap;
+        }
 
-    /* Skills & Certificates */
-    .skills p, .certs p {
-        font-size: 15px;
-        margin-bottom: 6px;
-    }
-</style>
+        nav li {
+            margin: 0;
+        }
+
+        nav a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section:nth-child(even) {
+            background: var(--bg-alt);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text);
+            margin-bottom: 0.3rem;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        .interests {
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: #ebf8ff;
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Education & Experience */
+        .entry {
+            margin-bottom: 1.8rem;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .entry-title {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .entry-subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-top: 0.2rem;
+        }
+
+        .entry-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        .entry-detail {
+            margin-top: 0.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Projects */
+        .project {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .project:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .project-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .project ul {
+            margin-left: 1.2rem;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .project li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Skills */
+        .skill-category {
+            margin-bottom: 1.2rem;
+        }
+
+        .skill-category strong {
+            color: var(--primary);
+            display: inline-block;
+            min-width: 140px;
+        }
+
+        /* Certifications */
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .cert-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer .social-links {
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .entry-header {
+                flex-direction: column;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 0.8rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+<base target="_blank">
 </head>
-
 <body>
 
-<!-- ==================== HEADER ==================== -->
-<h1>Appau Gideon Kofi Amo</h1>
-<div class="contacts">
-    <a href="mailto:gideonamoappau@mail.ustc.edu.cn">Email</a>
-    <a href="https://amo-gideon.github.io">Website</a>
-    <a href="https://github.com/Amo-Gideon">GitHub</a>
-    <a href="https://linkedin.com/in/gideon-appau-022312212/">LinkedIn</a>
-    <a href="https://x.com/AmoAppau">X (Twitter)</a>
-</div>
+    <!-- Hero / Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Replace src with your photo filename: Gideon Appau_Amo.jpg -->
+            <img src="Gideon Appau_Amo.jpg" alt="Appau Gideon Kofi Amo" class="profile-img" onerror="this.style.display='none'">
 
-<!-- ==================== RESEARCH INTERESTS ==================== -->
-<h2>Research Interests</h2>
-<p class="intro">
-    Agentic AI Systems, Retrieval-Augmented Generation (RAG), Multimodal Learning, Memory-Augmented Models, Long-Tailed Learning, Transformer Architectures
-</p>
-<p class="intro">
-    I am interested in building intelligent systems that integrate retrieval, reasoning, and adaptive memory. My current work focuses on personalized agentic RAG systems, extending traditional retrieval pipelines with autonomous decision-making, iterative self-correction, and user-aware retrieval strategies.
-</p>
+            <h1>Appau Gideon Kofi Amo</h1>
+            <p class="tagline">M.S. Student in Software Engineering (AI/ML) · USTC</p>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Suzhou, China</p>
 
-<!-- ==================== EDUCATION ==================== -->
-<h2>Education</h2>
+            <div class="social-links">
+                <a href="https://github.com/Amo-Gideon" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/gideon-appau-022312212/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/AmoAppau" target="_blank" title="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:gideonamoappau@mail.ustc.edu.cn" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
 
-<div class="entry">
-    <div class="title">University of Science and Technology of China (USTC), Suzhou, China</div>
-    <div class="date">Expected July 2027</div>
-    <div class="info">M.S. in Software Engineering (AI/ML) | CGPA: 3.06/4.3</div>
-</div>
+            <a href="cv.pdf" class="btn" download><i class="fas fa-download"></i> Download CV</a>
+        </div>
+    </header>
 
-<div class="entry">
-    <div class="title">University of Education, Winneba, Ghana</div>
-    <div class="date">2018 – 2022</div>
-    <div class="info">B.Sc. in Information Technology Education | CGPA: 3.61/4.0 (First Class Honors, Top 10%)</div>
-</div>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#certs">Certifications</a></li>
+        </ul>
+    </nav>
 
-<!-- ==================== SELECTED RESEARCH & PROJECTS ==================== -->
-<h2>Selected Research & Projects</h2>
+    <!-- About -->
+    <section id="about">
+        <h2><i class="fas fa-user"></i> About Me</h2>
+        <p class="about-text">
+            I am interested in building intelligent systems that integrate retrieval, reasoning, and adaptive memory. 
+            My current work focuses on <strong>personalized agentic RAG systems</strong>, extending traditional retrieval 
+            pipelines with autonomous decision-making, iterative self-correction, and user-aware retrieval strategies.
+        </p>
+        <div class="interests">
+            <span class="tag">Agentic AI</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Multimodal Learning</span>
+            <span class="tag">Memory-Augmented Models</span>
+            <span class="tag">Long-Tailed Learning</span>
+            <span class="tag">Transformers</span>
+        </div>
+    </section>
 
-<div class="entry">
-    <div class="title">Personalized Agentic RAG System</div>
-    <div class="date">2025 – Present</div>
-    <div class="info tech">LangGraph, LangChain, FAISS, LLMs</div>
-    <ul>
-        <li>Designing a memory-augmented agentic RAG system with adaptive retrieval and iterative reasoning.</li>
-        <li>Incorporating user modeling, confidence estimation, and self-correction loops in LLM pipelines.</li>
-        <li>Investigating long-context reasoning and uncertainty handling in autonomous AI systems.</li>
-    </ul>
-</div>
+    <!-- Education -->
+    <section id="education">
+        <h2><i class="fas fa-graduation-cap"></i> Education</h2>
 
-<div class="entry">
-    <div class="title">Campus Knowledge Base RAG Chatbot</div>
-    <div class="date">2025</div>
-    <div class="info tech">LangChain, Ollama, Chroma</div>
-    <ul>
-        <li>Built a semantic retrieval system using vector databases for domain-specific question answering.</li>
-        <li>Designed evaluation pipelines for assessing embedding quality and retrieval performance.</li>
-    </ul>
-</div>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">University of Science and Technology of China (USTC)</div>
+                    <div class="entry-subtitle">M.S. in Software Engineering (AI/ML)</div>
+                </div>
+                <div class="entry-date">Expected July 2027</div>
+            </div>
+            <div class="entry-detail">Suzhou, China · CGPA: 3.06/4.3</div>
+        </div>
 
-<div class="entry">
-    <div class="title">Machine Learning Projects (Future Interns Program)</div>
-    <div class="date">2026</div>
-    <div class="info tech">
-        Python, scikit-learn, Transformers |
-        <a href="https://github.com/Amo-Gideon/FUTURE_ML_01">FUTURE_ML_01</a> |
-        <a href="https://github.com/Amo-Gideon/FUTURE_ML_02">FUTURE_ML_02</a> |
-        <a href="https://github.com/Amo-Gideon/FUTURE_ML_03">FUTURE_ML_03</a>
-    </div>
-    <ul>
-        <li>Developed end-to-end machine learning pipelines for time-series forecasting and NLP tasks.</li>
-        <li>Applied transformer-based models (BERT/DistilBERT) for classification and sentiment analysis.</li>
-        <li>Built candidate ranking and resume screening systems using NLP and LLM-based approaches.</li>
-    </ul>
-</div>
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">University of Education, Winneba</div>
+                    <div class="entry-subtitle">B.Sc. in Information Technology Education</div>
+                </div>
+                <div class="entry-date">2018 – 2022</div>
+            </div>
+            <div class="entry-detail">Ghana · CGPA: 3.61/4.0 (First Class Honors, Top 10%)</div>
+        </div>
+    </section>
 
-<div class="entry">
-    <div class="title">AI Study Coach (Multi-Agent System)</div>
-    <div class="date">2025</div>
-    <div class="info tech">AutoGen, multi-agent systems</div>
-    <ul>
-        <li>Developed a multi-agent AI system with specialized roles for personalized learning assistance.</li>
-        <li>Designed real-time interaction pipelines using LLM-based agents.</li>
-    </ul>
-</div>
+    <!-- Projects -->
+    <section id="projects">
+        <h2><i class="fas fa-code"></i> Selected Research & Projects</h2>
 
-<div class="entry">
-    <div class="title">CNN for Fashion-MNIST Classification</div>
-    <div class="date">2025</div>
-    <div class="info tech">PyTorch</div>
-    <ul>
-        <li>Implemented a convolutional neural network achieving ~90% classification accuracy.</li>
-    </ul>
-</div>
+        <div class="project">
+            <div class="project-header">
+                <span class="project-title">Personalized Agentic RAG System</span>
+                <span class="entry-date">2025 – Present</span>
+            </div>
+            <div class="tech-stack">LangGraph · LangChain · FAISS · LLMs</div>
+            <ul>
+                <li>Designing a memory-augmented agentic RAG system with adaptive retrieval and iterative reasoning.</li>
+                <li>Incorporating user modeling, confidence estimation, and self-correction loops in LLM pipelines.</li>
+                <li>Investigating long-context reasoning and uncertainty handling in autonomous AI systems.</li>
+            </ul>
+        </div>
 
-<!-- ==================== RESEARCH DIRECTION ==================== -->
-<h2>Research Direction</h2>
-<ul>
-    <li>Exploring agent-based learning systems under uncertainty and long-tailed distributions.</li>
-    <li>Investigating the integration of reinforcement learning with retrieval-augmented systems.</li>
-</ul>
+        <div class="project">
+            <div class="project-header">
+                <span class="project-title">Campus Knowledge Base RAG Chatbot</span>
+                <span class="entry-date">2025</span>
+            </div>
+            <div class="tech-stack">LangChain · Ollama · Chroma</div>
+            <ul>
+                <li>Built a semantic retrieval system using vector databases for domain-specific question answering.</li>
+                <li>Designed evaluation pipelines for assessing embedding quality and retrieval performance.</li>
+            </ul>
+        </div>
 
-<!-- ==================== EXPERIENCE ==================== -->
-<h2>Experience</h2>
+        <div class="project">
+            <div class="project-header">
+                <span class="project-title">Machine Learning Projects (Future Interns Program)</span>
+                <span class="entry-date">2026</span>
+            </div>
+            <div class="tech-stack">Python · scikit-learn · Transformers</div>
+            <div class="project-links">
+                <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" target="_blank"><i class="fab fa-github"></i> FUTURE_ML_01</a>
+                <a href="https://github.com/Amo-Gideon/FUTURE_ML_02" target="_blank"><i class="fab fa-github"></i> FUTURE_ML_02</a>
+                <a href="https://github.com/Amo-Gideon/FUTURE_ML_03" target="_blank"><i class="fab fa-github"></i> FUTURE_ML_03</a>
+            </div>
+            <ul>
+                <li>Developed end-to-end machine learning pipelines for time-series forecasting and NLP tasks.</li>
+                <li>Applied transformer-based models (BERT/DistilBERT) for classification and sentiment analysis.</li>
+                <li>Built candidate ranking and resume screening systems using NLP and LLM-based approaches.</li>
+            </ul>
+        </div>
 
-<div class="entry">
-    <div class="title">Machine Learning Intern, Future Interns (Remote)</div>
-    <div class="date">Mar 2026 – Apr 2026</div>
-    <ul>
-        <li>Developed machine learning pipelines for forecasting and NLP-based classification tasks.</li>
-        <li>Applied transformer-based models for real-world text analysis and predictive modeling.</li>
-    </ul>
-</div>
+        <div class="project">
+            <div class="project-header">
+                <span class="project-title">AI Study Coach (Multi-Agent System)</span>
+                <span class="entry-date">2025</span>
+            </div>
+            <div class="tech-stack">AutoGen · multi-agent systems</div>
+            <ul>
+                <li>Developed a multi-agent AI system with specialized roles for personalized learning assistance.</li>
+                <li>Designed real-time interaction pipelines using LLM-based agents.</li>
+            </ul>
+        </div>
 
-<div class="entry">
-    <div class="title">IT Assistant, Akenten Appiah Menkah University, Ghana</div>
-    <div class="date">Nov 2022 – Aug 2023</div>
-    <ul>
-        <li>Automated data workflows using Python, reducing processing time by 40%.</li>
-        <li>Managed SQL databases (5,000+ records) and optimized query performance.</li>
-    </ul>
-</div>
+        <div class="project">
+            <div class="project-header">
+                <span class="project-title">CNN for Fashion-MNIST Classification</span>
+                <span class="entry-date">2025</span>
+            </div>
+            <div class="tech-stack">PyTorch</div>
+            <ul>
+                <li>Implemented a convolutional neural network achieving ~90% classification accuracy.</li>
+            </ul>
+        </div>
+    </section>
 
-<!-- ==================== TECHNICAL SKILLS ==================== -->
-<h2>Technical Skills</h2>
-<div class="skills">
-    <p><strong>Languages:</strong> Python, JavaScript, SQL, Java, Bash</p>
-    <p><strong>Machine Learning:</strong> PyTorch, scikit-learn, Transformers</p>
-    <p><strong>LLM Systems:</strong> LangChain, LangGraph, AutoGen, FAISS, Chroma, RAG</p>
-    <p><strong>NLP:</strong> BERT, DistilBERT, spaCy, NLTK</p>
-    <p><strong>Tools:</strong> Git, Docker, Linux, Gradio</p>
-</div>
+    <!-- Research Direction -->
+    <section id="research">
+        <h2><i class="fas fa-compass"></i> Research Direction</h2>
+        <ul style="margin-left: 1.2rem;">
+            <li>Exploring agent-based learning systems under uncertainty and long-tailed distributions.</li>
+            <li>Investigating the integration of reinforcement learning with retrieval-augmented systems.</li>
+        </ul>
+    </section>
 
-<!-- ==================== CERTIFICATIONS ==================== -->
-<h2>Certifications</h2>
-<div class="certs">
-    <p>NVIDIA – LLM RAG Agent Fundamentals (2025)</p>
-    <p>DeepLearning.AI – Advanced Learning Algorithms (2025)</p>
-    <p>DeepLearning.AI – Supervised Machine Learning (2025)</p>
-</div>
+    <!-- Experience -->
+    <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">Machine Learning Intern</div>
+                    <div class="entry-subtitle">Future Interns (Remote)</div>
+                </div>
+                <div class="entry-date">March 2026 – April 2026</div>
+            </div>
+            <ul style="margin-left: 1.2rem; margin-top: 0.5rem;">
+                <li>Developed machine learning pipelines for forecasting and NLP-based classification tasks.</li>
+                <li>Applied transformer-based models for real-world text analysis and predictive modeling.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div>
+                    <div class="entry-title">IT Assistant</div>
+                    <div class="entry-subtitle">Akenten Appiah Menkah University, Ghana</div>
+                </div>
+                <div class="entry-date">November 2022 – August 2023</div>
+            </div>
+            <ul style="margin-left: 1.2rem; margin-top: 0.5rem;">
+                <li>Automated data workflows using Python, reducing processing time by 40%.</li>
+                <li>Managed SQL databases (5,000+ records) and optimized query performance.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+
+        <div class="skill-category">
+            <strong>Languages:</strong> Python, JavaScript, SQL, Java, Bash
+        </div>
+        <div class="skill-category">
+            <strong>Machine Learning:</strong> PyTorch, scikit-learn, Transformers
+        </div>
+        <div class="skill-category">
+            <strong>LLM Systems:</strong> LangChain, LangGraph, AutoGen, FAISS, Chroma, RAG
+        </div>
+        <div class="skill-category">
+            <strong>NLP:</strong> BERT, DistilBERT, spaCy, NLTK
+        </div>
+        <div class="skill-category">
+            <strong>Tools:</strong> Git, Docker, Linux, Gradio
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certs">
+        <h2><i class="fas fa-certificate"></i> Certifications</h2>
+        <ul class="cert-list">
+            <li><strong>NVIDIA</strong> — LLM RAG Agent Fundamentals <span style="color: var(--text-light);">(2025)</span></li>
+            <li><strong>DeepLearning.AI</strong> — Advanced Learning Algorithms <span style="color: var(--text-light);">(2025)</span></li>
+            <li><strong>DeepLearning.AI</strong> — Supervised Machine Learning <span style="color: var(--text-light);">(2025)</span></li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Amo-Gideon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/gideon-appau-022312212/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/AmoAppau" target="_blank"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:gideonamoappau@mail.ustc.edu.cn"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 Appau Gideon Kofi Amo. Built with HTML & CSS.</p>
+    </footer>
 
 </body>
 </html>
