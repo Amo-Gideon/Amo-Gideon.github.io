@@ -1,164 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appau Gideon Kofi Amo</title>
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Georgia, "Times New Roman", serif;
-    color: #222;
-    background-color: #fff;
-    line-height: 1.7;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+  background: #fff;
+  line-height: 1.6;
 }
 
-/* Header Navigation */
+/* Top Navigation */
 .top-nav {
-    border-bottom: 1px solid #eee;
-    padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  border-bottom: 1px solid #eee;
 }
 
 .top-nav a {
-    color: #555;
-    text-decoration: none;
-    margin-right: 2rem;
-    font-size: 1rem;
+  color: #666;
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 16px;
 }
 
-.top-nav a:hover {
-    text-decoration: underline;
+.top-nav a.name {
+  color: #111;
+  font-weight: bold;
 }
 
-.top-nav .name {
-    font-weight: 600;
-    color: #222;
-}
-
-/* Page Layout */
+/* Main Container */
 .container {
-    display: flex;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    gap: 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  display: flex;
+  gap: 40px;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 220px;
-    flex-shrink: 0;
-    text-align: center;
+  width: 200px;
+  flex-shrink: 0;
+  text-align: center;
 }
 
-.sidebar .profile-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 1rem;
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .sidebar h1 {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 
-.sidebar .title {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
+.sidebar .desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
-.sidebar-links {
-    list-style: none;
-    text-align: left;
-    font-size: 0.9rem;
+.sidebar ul {
+  list-style: none;
+  text-align: left;
+  font-size: 14px;
 }
 
-.sidebar-links li {
-    margin-bottom: 0.6rem;
+.sidebar li {
+  margin-bottom: 6px;
 }
 
-.sidebar-links a {
-    color: #222;
-    text-decoration: none;
+.sidebar a {
+  color: #111;
+  text-decoration: none;
 }
 
-.sidebar-links a:hover {
-    text-decoration: underline;
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 /* Main Content */
-.main-content {
-    flex-grow: 1;
-    max-width: 680px;
+.main {
+  flex: 1;
 }
 
-.main-content h2 {
-    font-size: 1.15rem;
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid #eee;
+.main h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #eee;
 }
 
-.main-content p {
-    margin-bottom: 1rem;
+.main p {
+  margin-bottom: 12px;
+  font-size: 15px;
 }
 
-/* Entries */
+/* Entry Layout */
 .entry {
-    margin-bottom: 1.2rem;
+  margin-bottom: 15px;
 }
 
-.entry-header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 0.3rem;
+.entry .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.entry-title {
-    font-weight: 600;
+.entry .title {
+  font-weight: bold;
+  font-size: 15px;
 }
 
-.entry-date {
-    color: #666;
-    font-size: 0.85rem;
-    white-space: nowrap;
+.entry .date {
+  color: #666;
+  font-size: 14px;
 }
 
-.entry-subtitle {
-    color: #444;
-    font-size: 0.9rem;
-}
-
-/* Tech Stack */
-.tech-stack {
-    font-style: italic;
-    color: #666;
-    font-size: 0.85rem;
-    margin: 0.3rem 0;
+.entry .info {
+  color: #444;
+  font-size: 14px;
 }
 
 /* Lists */
-ul {
-    margin-left: 1.5rem;
-    font-size: 0.9rem;
+.main ul {
+  margin-left: 20px;
+  font-size: 14px;
 }
 
-/* Links */
-a {
-    color: #222;
-    text-decoration: none;
+.main li {
+  margin-bottom: 4px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Remove red accent (make it subtle) */
-.accent-link {
-    color: #222;
-    text-decoration: underline;
+/* Mobile */
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+  }
 }
 </style>
+</head>
+
+<body>
+
+<div class="top-nav">
+  <a href="#" class="name">Appau Gideon Kofi Amo</a>
+  <a href="#research">Research</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="cv.pdf">CV</a>
+</div>
+
+<div class="container">
+  <div class="sidebar">
+    <img src="profile.jpg" alt="Profile" class="profile-img">
+    <h1>Appau Gideon Kofi Amo</h1>
+    <p class="desc">M.S. Student in AI/ML at USTC</p>
+    <ul>
+      <li>📍 Suzhou, China</li>
+      <li><a href="mailto:gideonamoappau@mail.ustc.edu.cn">Email</a></li>
+      <li><a href="https://github.com/Amo-Gideon">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/gideon-appau-022312212/">LinkedIn</a></li>
+      <li><a href="https://x.com/AmoAppau">X (Twitter)</a></li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <h2>About</h2>
+    <p>
+      I am a Master’s student at the University of Science and Technology of China (USTC), 
+      focusing on intelligent systems that combine retrieval, reasoning, and adaptive memory. 
+      My current work centers on personalized agentic RAG systems with autonomous decision-making 
+      and self-correction.
+    </p>
+
+    <h2>Research Interests</h2>
+    <p>
+      Agentic AI Systems, Retrieval-Augmented Generation (RAG), Multimodal Learning, 
+      Memory-Augmented Models, Long-Tailed Learning, Transformer Architectures
+    </p>
+
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="row">
+        <div class="title">University of Science and Technology of China (USTC)</div>
+        <div class="date">Expected July 2027</div>
+      </div>
+      <div class="info">M.S. in Software Engineering (AI/ML) · CGPA: 3.06/4.3</div>
+    </div>
+    <div class="entry">
+      <div class="row">
+        <div class="title">University of Education, Winneba</div>
+        <div class="date">2018 – 2022</div>
+      </div>
+      <div class="info">B.Sc. in Information Technology Education · First Class Honors</div>
+    </div>
+
+    <h2 id="projects">Selected Projects</h2>
+    <div class="entry">
+      <div class="row">
+        <div class="title">Personalized Agentic RAG System</div>
+        <div class="date">2025 – Present</div>
+      </div>
+      <div class="info">LangGraph, LangChain, FAISS, LLMs</div>
+      <ul>
+        <li>Designing memory-augmented agentic RAG with adaptive retrieval</li>
+        <li>User modeling, confidence estimation, and self-correction loops</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <div class="row">
+        <div class="title">Campus Knowledge Base RAG Chatbot</div>
+        <div class="date">2025</div>
+      </div>
+      <div class="info">LangChain, Ollama, Chroma</div>
+    </div>
+    <div class="entry">
+      <div class="row">
+        <div class="title">Machine Learning Projects (Future Interns)</div>
+        <div class="date">2026</div>
+      </div>
+      <div class="info">Python, scikit-learn, Transformers</div>
+    </div>
+
+    <h2 id="experience">Experience</h2>
+    <div class="entry">
+      <div class="row">
+        <div class="title">Machine Learning Intern, Future Interns</div>
+        <div class="date">Mar – Apr 2026</div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="row">
+        <div class="title">IT Assistant, AAMUSTED</div>
+        <div class="date">Nov 2022 – Aug 2023</div>
+      </div>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <p>
+      Python, JavaScript, SQL, Java, Bash · PyTorch, scikit-learn, Transformers ·
+      LangChain, LangGraph, AutoGen, FAISS, Chroma · BERT, spaCy, NLTK · Git, Docker, Linux
+    </p>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>NVIDIA — LLM RAG Agent Fundamentals (2025)</li>
+      <li>DeepLearning.AI — Advanced Learning Algorithms (2025)</li>
+      <li>DeepLearning.AI — Supervised Machine Learning (2025)</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
