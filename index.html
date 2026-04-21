@@ -1,334 +1,164 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appau Gideon Kofi Amo</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #333;
-            background-color: #fff;
-            line-height: 1.6;
-        }
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #222;
+    background-color: #fff;
+    line-height: 1.7;
+}
 
-        /* Header Navigation */
-        .top-nav {
-            border-bottom: 1px solid #eee;
-            padding: 1rem 2rem;
-        }
+/* Header Navigation */
+.top-nav {
+    border-bottom: 1px solid #eee;
+    padding: 1rem 2rem;
+}
 
-        .top-nav a {
-            color: #777;
-            text-decoration: none;
-            margin-right: 2.5rem;
-            font-size: 1.1rem;
-        }
+.top-nav a {
+    color: #555;
+    text-decoration: none;
+    margin-right: 2rem;
+    font-size: 1rem;
+}
 
-        .top-nav a:hover {
-            color: #333;
-        }
+.top-nav a:hover {
+    text-decoration: underline;
+}
 
-        .top-nav .name {
-            font-weight: 600;
-            color: #333;
-        }
+.top-nav .name {
+    font-weight: 600;
+    color: #222;
+}
 
-        /* Page Layout */
-        .container {
-            display: flex;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            gap: 3rem;
-        }
+/* Page Layout */
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    gap: 3rem;
+}
 
-        /* Left Sidebar */
-        .sidebar {
-            width: 220px;
-            flex-shrink: 0;
-            text-align: center;
-        }
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    flex-shrink: 0;
+    text-align: center;
+}
 
-        .sidebar .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 3px solid #fff;
-            box-shadow: 0 0 0 1px #eee;
-        }
+.sidebar .profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
 
-        .sidebar h1 {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
+.sidebar h1 {
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+}
 
-        .sidebar .title {
-            color: #777;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
+.sidebar .title {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
 
-        .sidebar-links {
-            list-style: none;
-            text-align: left;
-            font-size: 0.95rem;
-        }
+.sidebar-links {
+    list-style: none;
+    text-align: left;
+    font-size: 0.9rem;
+}
 
-        .sidebar-links li {
-            margin-bottom: 0.7rem;
-        }
+.sidebar-links li {
+    margin-bottom: 0.6rem;
+}
 
-        .sidebar-links a {
-            color: #333;
-            text-decoration: none;
-        }
+.sidebar-links a {
+    color: #222;
+    text-decoration: none;
+}
 
-        .sidebar-links a:hover {
-            color: #0066cc;
-        }
+.sidebar-links a:hover {
+    text-decoration: underline;
+}
 
-        /* Main Content Area */
-        .main-content {
-            flex-grow: 1;
-            max-width: 700px;
-        }
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    max-width: 680px;
+}
 
-        .main-content h2 {
-            font-size: 1.2rem;
-            margin: 2.5rem 0 1rem;
-            padding-bottom: 0.3rem;
-            border-bottom: 1px solid #eee;
-        }
+.main-content h2 {
+    font-size: 1.15rem;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #eee;
+}
 
-        .main-content p {
-            margin-bottom: 1rem;
-        }
+.main-content p {
+    margin-bottom: 1rem;
+}
 
-        /* Entry Layout (Education/Experience/Projects) */
-        .entry {
-            margin-bottom: 1.2rem;
-        }
+/* Entries */
+.entry {
+    margin-bottom: 1.2rem;
+}
 
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 0.3rem;
-        }
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+}
 
-        .entry-title {
-            font-weight: 600;
-        }
+.entry-title {
+    font-weight: 600;
+}
 
-        .entry-date {
-            color: #777;
-            font-size: 0.9rem;
-            white-space: nowrap;
-        }
+.entry-date {
+    color: #666;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
 
-        .entry-subtitle {
-            color: #555;
-            font-size: 0.95rem;
-        }
+.entry-subtitle {
+    color: #444;
+    font-size: 0.9rem;
+}
 
-        /* Project Tech Stack */
-        .tech-stack {
-            font-style: italic;
-            color: #777;
-            font-size: 0.9rem;
-            margin: 0.3rem 0;
-        }
+/* Tech Stack */
+.tech-stack {
+    font-style: italic;
+    color: #666;
+    font-size: 0.85rem;
+    margin: 0.3rem 0;
+}
 
-        /* Lists */
-        ul {
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-        }
+/* Lists */
+ul {
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+}
 
-        /* Links (red accent like Yann's site) */
-        .accent-link {
-            color: #d12429;
-            text-decoration: none;
-        }
+/* Links */
+a {
+    color: #222;
+    text-decoration: none;
+}
 
-        .accent-link:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <!-- Top Navigation -->
-    <div class="top-nav">
-        <a href="#" class="name">Appau Gideon Kofi Amo</a>
-        <a href="#publications">Publications</a>
-        <a href="#blog">Blog</a>
-        <a href="#glossary">ML Glossary</a>
-        <a href="cv.pdf">CV</a>
-    </div>
+a:hover {
+    text-decoration: underline;
+}
 
-    <div class="container">
-        <!-- Left Sidebar -->
-        <aside class="sidebar">
-            <img src="profile.jpg" alt="Profile Photo" class="profile-img">
-            <h1>Appau Gideon Kofi Amo</h1>
-            <p class="title">M.S. Student in Software Engineering (AI/ML)</p>
-
-            <ul class="sidebar-links">
-                <li>📍 Suzhou, China</li>
-                <li><a href="mailto:gideonamoappau@mail.ustc.edu.cn">✉️ Email</a></li>
-                <li><a href="https://github.com/Amo-Gideon">🐙 GitHub</a></li>
-                <li><a href="https://linkedin.com/in/gideon-appau-022312212/">💼 LinkedIn</a></li>
-                <li><a href="https://x.com/AmoAppau">🐦 X (Twitter)</a></li>
-                <li><a href="https://scholar.google.com/">📚 Google Scholar</a></li>
-            </ul>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <h2>Hello!</h2>
-            <p>
-                I am a Master's student at the <a href="#" class="accent-link">University of Science and Technology of China (USTC)</a>, focusing on building intelligent systems that integrate retrieval, reasoning, and adaptive memory. My current work focuses on <strong>personalized agentic RAG systems</strong>, extending traditional retrieval pipelines with autonomous decision-making, iterative self-correction, and user-aware retrieval strategies.
-            </p>
-
-            <p>
-                My research interests include: Agentic AI Systems, Retrieval-Augmented Generation (RAG), Multimodal Learning, Memory-Augmented Models, Long-Tailed Learning, and Transformer Architectures.
-            </p>
-
-            <h2>Education</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">University of Science and Technology of China (USTC)</div>
-                    <div class="entry-date">Expected July 2027</div>
-                </div>
-                <div class="entry-subtitle">M.S. in Software Engineering (AI/ML)</div>
-                <div class="entry-subtitle">Suzhou, China · CGPA: 3.06/4.3</div>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">University of Education, Winneba</div>
-                    <div class="entry-date">2018 – 2022</div>
-                </div>
-                <div class="entry-subtitle">B.Sc. in Information Technology Education</div>
-                <div class="entry-subtitle">Ghana · CGPA: 3.61/4.0 (First Class Honors, Top 10%)</div>
-            </div>
-
-            <h2>Selected Research & Projects</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">Personalized Agentic RAG System</div>
-                    <div class="entry-date">2025 – Present</div>
-                </div>
-                <div class="tech-stack">LangGraph · LangChain · FAISS · LLMs</div>
-                <ul>
-                    <li>Designing a memory-augmented agentic RAG system with adaptive retrieval and iterative reasoning.</li>
-                    <li>Incorporating user modeling, confidence estimation, and self-correction loops in LLM pipelines.</li>
-                    <li>Investigating long-context reasoning and uncertainty handling in autonomous AI systems.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">Campus Knowledge Base RAG Chatbot</div>
-                    <div class="entry-date">2025</div>
-                </div>
-                <div class="tech-stack">LangChain · Ollama · Chroma</div>
-                <ul>
-                    <li>Built a semantic retrieval system using vector databases for domain-specific question answering.</li>
-                    <li>Designed evaluation pipelines for assessing embedding quality and retrieval performance.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">Machine Learning Projects (Future Interns Program)</div>
-                    <div class="entry-date">2026</div>
-                </div>
-                <div class="tech-stack">Python · scikit-learn · Transformers</div>
-                <ul>
-                    <li><a href="https://github.com/Amo-Gideon/FUTURE_ML_01" class="accent-link">FUTURE_ML_01</a>: Time-series forecasting pipeline.</li>
-                    <li><a href="https://github.com/Amo-Gideon/FUTURE_ML_02" class="accent-link">FUTURE_ML_02</a>: NLP classification and sentiment analysis.</li>
-                    <li><a href="https://github.com/Amo-Gideon/FUTURE_ML_03" class="accent-link">FUTURE_ML_03</a>: Resume screening and candidate ranking system.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">AI Study Coach (Multi-Agent System)</div>
-                    <div class="entry-date">2025</div>
-                </div>
-                <div class="tech-stack">AutoGen · multi-agent systems</div>
-                <ul>
-                    <li>Developed a multi-agent AI system with specialized roles for personalized learning assistance.</li>
-                    <li>Designed real-time interaction pipelines using LLM-based agents.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">CNN for Fashion-MNIST Classification</div>
-                    <div class="entry-date">2025</div>
-                </div>
-                <div class="tech-stack">PyTorch</div>
-                <ul>
-                    <li>Implemented a convolutional neural network achieving ~90% classification accuracy.</li>
-                </ul>
-            </div>
-
-            <h2>Research Direction</h2>
-            <ul>
-                <li>Exploring agent-based learning systems under uncertainty and long-tailed distributions.</li>
-                <li>Investigating the integration of reinforcement learning with retrieval-augmented systems.</li>
-            </ul>
-
-            <h2>Experience</h2>
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">Machine Learning Intern, Future Interns (Remote)</div>
-                    <div class="entry-date">March 2026 – April 2026</div>
-                </div>
-                <ul>
-                    <li>Developed machine learning pipelines for forecasting and NLP-based classification tasks.</li>
-                    <li>Applied transformer-based models for real-world text analysis and predictive modeling.</li>
-                </ul>
-            </div>
-
-            <div class="entry">
-                <div class="entry-header">
-                    <div class="entry-title">IT Assistant, Akenten Appiah Menkah University, Ghana</div>
-                    <div class="entry-date">November 2022 – August 2023</div>
-                </div>
-                <ul>
-                    <li>Automated data workflows using Python, reducing processing time by 40%.</li>
-                    <li>Managed SQL databases (5,000+ records) and optimized query performance.</li>
-                </ul>
-            </div>
-
-            <h2>Technical Skills</h2>
-            <p>
-                <strong>Languages:</strong> Python, JavaScript, SQL, Java, Bash<br>
-                <strong>Machine Learning:</strong> PyTorch, scikit-learn, Transformers<br>
-                <strong>LLM Systems:</strong> LangChain, LangGraph, AutoGen, FAISS, Chroma, RAG<br>
-                <strong>NLP:</strong> BERT, DistilBERT, spaCy, NLTK<br>
-                <strong>Tools:</strong> Git, Docker, Linux, Gradio
-            </p>
-
-            <h2>Certifications</h2>
-            <ul>
-                <li><strong>NVIDIA</strong> — LLM RAG Agent Fundamentals (2025)</li>
-                <li><strong>DeepLearning.AI</strong> — Advanced Learning Algorithms (2025)</li>
-                <li><strong>DeepLearning.AI</strong> — Supervised Machine Learning (2025)</li>
-            </ul>
-        </main>
-    </div>
-</body>
-</html>
+/* Remove red accent (make it subtle) */
+.accent-link {
+    color: #222;
+    text-decoration: underline;
+}
+</style>
