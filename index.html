@@ -3,319 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gideon Appau Amo — AI/ML Research Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Gideon Appau Amo</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #ffffff;
             --text: #1a1a1a;
-            --text-secondary: #555555;
-            --text-muted: #888888;
+            --text-secondary: #444;
+            --text-muted: #888;
+            --link: #2563eb;
+            --link-hover: #1d4ed8;
             --border: #e5e5e5;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --card-bg: #fafafa;
-            --shadow: 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-hover: 0 4px 12px rgba(0,0,0,0.12);
+            --bg: #fff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.65;
+            line-height: 1.7;
             font-size: 15px;
             -webkit-font-smoothing: antialiased;
         }
-        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
-        a:hover { color: var(--accent-hover); text-decoration: underline; }
-        img { max-width: 100%; display: block; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { color: var(--link-hover); text-decoration: underline; }
 
-        /* Layout */
         .container {
-            max-width: 780px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 28px;
         }
 
-        /* Header / Hero */
-        .hero {
-            padding: 80px 0 40px;
-            text-align: center;
+        /* Header with photo + info side by side */
+        .header {
+            display: flex;
+            gap: 32px;
+            padding: 60px 0 40px;
+            align-items: flex-start;
         }
-        .hero-photo {
+        .header-photo {
             width: 180px;
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        .hero h1 {
+        .header-info h1 {
             font-size: 32px;
             font-weight: 600;
             letter-spacing: -0.5px;
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
-        .hero .subtitle {
+        .header-info .title {
             font-size: 16px;
             color: var(--text-secondary);
-            font-weight: 400;
-            margin-bottom: 16px;
+            margin-bottom: 2px;
         }
-        .hero .affiliation {
+        .header-info .affiliation {
             font-size: 14px;
             color: var(--text-muted);
+            margin-bottom: 14px;
         }
-        .hero .socials {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .hero .socials a {
+        .header-info .contact {
             font-size: 14px;
             color: var(--text-secondary);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            line-height: 2;
         }
-        .hero .socials a:hover { color: var(--accent); }
-        .hero .socials svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
+        .header-info .contact a {
+            margin-right: 16px;
+            white-space: nowrap;
         }
-
-        /* Nav */
-        .nav {
-            position: sticky;
-            top: 0;
-            background: rgba(255,255,255,0.92);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            z-index: 100;
-            padding: 12px 0;
-        }
-        .nav .container {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .nav a {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .nav a:hover { color: var(--text); text-decoration: none; }
 
         /* Sections */
         section {
-            padding: 48px 0;
-            border-bottom: 1px solid var(--border);
+            padding: 28px 0;
+            border-top: 1px solid var(--border);
         }
-        section:last-of-type { border-bottom: none; }
-        .section-title {
+        section:first-of-type {
+            border-top: none;
+        }
+        h2 {
             font-size: 20px;
             font-weight: 600;
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid var(--text);
-            display: inline-block;
+            margin-bottom: 16px;
+            color: var(--text);
         }
-
-        /* About */
-        .about-text {
+        h3 {
             font-size: 15px;
-            color: var(--text-secondary);
-            max-width: 680px;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
-        .about-text p { margin-bottom: 14px; }
-        .about-text strong { color: var(--text); font-weight: 600; }
+        p {
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
 
-        /* Research Interests */
-        .tags {
+        /* Research interests */
+        .interests {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-        }
-        .tag {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
+            gap: 8px 16px;
+            font-size: 14px;
             color: var(--text-secondary);
-            font-weight: 500;
+        }
+        .interests span::after {
+            content: "•";
+            margin-left: 16px;
+            color: var(--text-muted);
+        }
+        .interests span:last-child::after {
+            content: "";
         }
 
-        /* Education & Experience */
-        .timeline-item {
+        /* Publications / Projects list */
+        .pub-list, .proj-list, .exp-list, .edu-list {
+            list-style: none;
+        }
+        .pub-item, .proj-item, .exp-item, .edu-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        .pub-item:last-child, .proj-item:last-child, .exp-item:last-child, .edu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .pub-title, .proj-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .pub-authors {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 2px;
+        }
+        .pub-authors em {
+            font-style: normal;
+            font-weight: 600;
+        }
+        .pub-venue {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+        .pub-links, .proj-links {
+            font-size: 13px;
+            margin-top: 4px;
+        }
+        .pub-links a, .proj-links a {
+            margin-right: 12px;
+        }
+
+        /* Experience & Education */
+        .exp-item, .edu-item {
             display: flex;
             gap: 20px;
-            margin-bottom: 28px;
         }
-        .timeline-item:last-child { margin-bottom: 0; }
-        .timeline-left {
-            min-width: 110px;
+        .exp-date, .edu-date {
+            min-width: 130px;
             text-align: right;
             font-size: 13px;
             color: var(--text-muted);
             font-weight: 500;
             padding-top: 2px;
+            flex-shrink: 0;
         }
-        .timeline-right h3 {
+        .exp-detail h3, .edu-detail h3 {
             font-size: 15px;
             font-weight: 600;
-            color: var(--text);
             margin-bottom: 2px;
         }
-        .timeline-right .institution {
+        .exp-detail .place, .edu-detail .place {
             font-size: 14px;
             color: var(--text-secondary);
             margin-bottom: 2px;
         }
-        .timeline-right .detail {
+        .exp-detail .desc, .edu-detail .desc {
             font-size: 13px;
             color: var(--text-muted);
-        }
-
-        /* Project Cards */
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 28px;
-        }
-        .project-card {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            transition: box-shadow 0.25s, transform 0.25s;
-        }
-        .project-card:hover {
-            box-shadow: var(--shadow-hover);
-            transform: translateY(-2px);
-        }
-        .project-thumb {
-            width: 140px;
-            min-width: 140px;
-            height: 100px;
-            border-radius: 8px;
-            object-fit: cover;
-            background: #eee;
-        }
-        .project-thumb.placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: var(--text-muted);
-            background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
-        }
-        .project-info h3 {
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .project-info .authors {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-        }
-        .project-info .authors em { color: var(--text-secondary); font-style: normal; font-weight: 500; }
-        .project-info .venue {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 8px;
-        }
-        .project-info .desc {
-            font-size: 13px;
-            color: var(--text-secondary);
-            line-height: 1.55;
-        }
-        .project-links {
-            margin-top: 10px;
-            display: flex;
-            gap: 14px;
-        }
-        .project-links a {
-            font-size: 13px;
-            font-weight: 500;
         }
 
         /* Skills */
-        .skill-category {
-            margin-bottom: 18px;
+        .skill-row {
+            margin-bottom: 10px;
+            font-size: 14px;
         }
-        .skill-category h4 {
-            font-size: 13px;
-            font-weight: 600;
+        .skill-row strong {
             color: var(--text);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            font-weight: 600;
         }
-        .skill-list {
-            font-size: 14px;
+        .skill-row span {
             color: var(--text-secondary);
-        }
-
-        /* Certifications */
-        .cert-list {
-            list-style: none;
-        }
-        .cert-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 14px;
-            color: var(--text-secondary);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .cert-list li:last-child { border-bottom: none; }
-        .cert-list .year {
-            font-size: 12px;
-            color: var(--text-muted);
-            font-weight: 500;
         }
 
         /* News */
         .news-item {
-            padding: 14px 0;
-            border-bottom: 1px solid var(--border);
             display: flex;
             gap: 16px;
+            margin-bottom: 12px;
         }
-        .news-item:last-child { border-bottom: none; }
         .news-date {
             min-width: 90px;
-            font-size: 12px;
+            font-size: 13px;
             color: var(--text-muted);
             font-weight: 500;
-            padding-top: 2px;
+            flex-shrink: 0;
         }
         .news-text {
             font-size: 14px;
             color: var(--text-secondary);
-        }
-
-        /* Publications */
-        .pub-placeholder {
-            font-size: 14px;
-            color: var(--text-muted);
-            font-style: italic;
-            padding: 20px 0;
         }
 
         /* Footer */
@@ -324,337 +224,284 @@
             padding: 40px 0 60px;
             font-size: 13px;
             color: var(--text-muted);
+            border-top: 1px solid var(--border);
         }
-        footer a { color: var(--text-muted); }
-        footer a:hover { color: var(--accent); }
 
         /* Responsive */
         @media (max-width: 640px) {
-            .hero { padding: 50px 0 30px; }
-            .hero h1 { font-size: 26px; }
-            .hero-photo { width: 140px; height: 140px; }
-            .timeline-item { flex-direction: column; gap: 4px; }
-            .timeline-left { text-align: left; }
-            .project-card { flex-direction: column; }
-            .project-thumb { width: 100%; height: 160px; }
-            .nav .container { gap: 16px; }
+            .header { flex-direction: column; align-items: center; text-align: center; }
+            .header-photo { width: 140px; height: 140px; }
+            .exp-item, .edu-item { flex-direction: column; gap: 4px; }
+            .exp-date, .edu-date { text-align: left; }
+            .news-item { flex-direction: column; gap: 2px; }
         }
     </style>
+<base target="_blank">
 </head>
 <body>
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="container">
-            <img src="profile.jpeg" alt="Gideon Appau Amo" class="hero-photo">
+<div class="container">
+
+    <!-- Header -->
+    <header class="header">
+        <img src="profile.jpeg" alt="Gideon Appau Amo" class="header-photo">
+        <div class="header-info">
             <h1>Gideon Appau Amo</h1>
-            <p class="subtitle">M.S. Student in Software Engineering (AI/ML)</p>
+            <p class="title">M.S. Student in Software Engineering (AI/ML)</p>
             <p class="affiliation">University of Science and Technology of China (USTC)</p>
-            <div class="socials">
-                <a href="mailto:gideonamoappau@mail.ustc.edu.cn" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    Email
-                </a>
-                <a href="https://github.com/Amo-Gideon" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/gideon-appau-022312212/" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    LinkedIn
-                </a>
-                <a href="cv.pdf" target="_blank">
-                    <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
-                    CV
-                </a>
+            <div class="contact">
+                <a href="mailto:gideonamoappau@mail.ustc.edu.cn">Email</a>
+                <a href="https://github.com/Amo-Gideon">GitHub</a>
+                <a href="https://linkedin.com/in/gideon-appau-022312212/">LinkedIn</a>
+                <a href="cv.pdf">CV</a>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="nav">
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#publications">Publications</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#news">News</a>
-        </div>
-    </nav>
-
     <!-- About -->
     <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-text">
-                <p>
-                    I am a Master's student at the <strong>University of Science and Technology of China (USTC)</strong>, 
-                    focusing on intelligent systems that combine retrieval, reasoning, and adaptive memory. 
-                    My current work centers on <strong>personalized agentic RAG systems</strong> with autonomous 
-                    decision-making and self-correction loops.
-                </p>
-                <p>
-                    I am also deeply interested in <strong>reinforcement learning</strong> for LLM agents, 
-                    <strong>long-tailed recognition</strong>, and <strong>sharpness-aware minimization (SAM)</strong> 
-                    methods for imbalanced datasets. I enjoy building end-to-end systems and open-sourcing 
-                    my work when possible.
-                </p>
-            </div>
-        </div>
+        <h2>About</h2>
+        <p>
+            I am a Master's student at the <strong>University of Science and Technology of China (USTC)</strong>, 
+            focusing on intelligent systems that combine retrieval, reasoning, and adaptive memory. 
+            My current research centers on <strong>personalized agentic RAG systems</strong> with autonomous 
+            decision-making and self-correction loops.
+        </p>
+        <p>
+            I am also deeply interested in <strong>reinforcement learning</strong> for LLM agents, 
+            <strong>long-tailed recognition</strong>, and <strong>sharpness-aware minimization (SAM)</strong> 
+            methods for imbalanced datasets. I enjoy building end-to-end systems and open-sourcing 
+            my work when possible.
+        </p>
     </section>
 
     <!-- Research Interests -->
     <section id="research">
-        <div class="container">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="tags">
-                <span class="tag">Agentic AI Systems</span>
-                <span class="tag">Retrieval-Augmented Generation (RAG)</span>
-                <span class="tag">Reinforcement Learning</span>
-                <span class="tag">Long-Tailed Learning</span>
-                <span class="tag">Sharpness-Aware Minimization</span>
-                <span class="tag">Multimodal Learning</span>
-                <span class="tag">Memory-Augmented Models</span>
-                <span class="tag">Transformer Architectures</span>
-                <span class="tag">LLM Agents</span>
-            </div>
+        <h2>Research Interests</h2>
+        <div class="interests">
+            <span>Agentic AI Systems</span>
+            <span>Retrieval-Augmented Generation (RAG)</span>
+            <span>Reinforcement Learning</span>
+            <span>Long-Tailed Learning</span>
+            <span>Sharpness-Aware Minimization</span>
+            <span>Multimodal Learning</span>
+            <span>LLM Agents</span>
         </div>
     </section>
 
     <!-- Projects -->
     <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Selected Projects</h2>
-            <div class="project-grid">
+        <h2>Selected Projects</h2>
+        <ul class="proj-list">
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">Project Diagram</div>
-                    <div class="project-info">
-                        <h3>Personalized Agentic RAG System</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">2025 — Present</div>
-                        <div class="desc">
-                            Designing memory-augmented agentic RAG with adaptive retrieval, 
-                            user modeling, confidence estimation, and self-correction loops. 
-                            Built with LangGraph, LangChain, FAISS, and LLMs.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">Personalized Agentic RAG System</div>
+                <div class="pub-venue">2025 — Present</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    Designing memory-augmented agentic RAG with adaptive retrieval, user modeling, 
+                    confidence estimation, and self-correction loops. Built with LangGraph, LangChain, FAISS, and LLMs.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/agentic-nano-ai">Code</a>
                 </div>
+            </li>
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">Chatbot UI</div>
-                    <div class="project-info">
-                        <h3>Campus Knowledge Base RAG Chatbot</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">2025</div>
-                        <div class="desc">
-                            A RAG prototype for campus knowledge retrieval using Ollama embeddings, 
-                            Chroma vector database, and a Gradio-based user interface.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">Campus Knowledge Base RAG Chatbot</div>
+                <div class="pub-venue">2025</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    A RAG prototype for campus knowledge retrieval using Ollama embeddings, 
+                    Chroma vector database, and a Gradio-based user interface.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/Campus-Knowledge-Base-RAG">Code</a>
                 </div>
+            </li>
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">ML Pipeline</div>
-                    <div class="project-info">
-                        <h3>Class-Adaptive Focal SAM</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">Master's Thesis, 2025–2026</div>
-                        <div class="desc">
-                            A class-adaptive focal loss combined with Sharpness-Aware Minimization (SAM) 
-                            for long-tailed visual recognition. Evaluated on CIFAR-10/100-LT, TinyImageNet, 
-                            ImageNet-LT, and iNaturalist 2018.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">Class-Adaptive Focal SAM</div>
+                <div class="pub-venue">Master's Thesis, 2025–2026</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    A class-adaptive focal loss combined with Sharpness-Aware Minimization (SAM) 
+                    for long-tailed visual recognition. Evaluated on CIFAR-10/100-LT, TinyImageNet, 
+                    ImageNet-LT, and iNaturalist 2018.
+                </p>
+                <div class="proj-links">
+                    <span style="font-size:13px; color:var(--text-muted);">Thesis — Code coming soon</span>
                 </div>
+            </li>
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">Agentic Economy</div>
-                    <div class="project-info">
-                        <h3>Agent Prime — Multi-Agent Orchestration with USDC Nanopayments</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">Lablab.ai Agentic Economy on Arc Hackathon, 2026</div>
-                        <div class="desc">
-                            A 3-agent workflow (Research / Writer / Editor) with real USDC nanopayments 
-                            on Arc Testnet. Includes on-chain verification via web3.py and hits both 
-                            Usage-Based Compute Billing and Agent-to-Agent Payment Loop tracks.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">Agent Prime — Multi-Agent Orchestration with USDC Nanopayments</div>
+                <div class="pub-venue">Lablab.ai Agentic Economy on Arc Hackathon, 2026</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    A 3-agent workflow (Research / Writer / Editor) with real USDC nanopayments 
+                    on Arc Testnet. Includes on-chain verification via web3.py and hits both 
+                    Usage-Based Compute Billing and Agent-to-Agent Payment Loop tracks.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/agentic-nano-ai">Code</a>
                 </div>
+            </li>
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">Resume Screening</div>
-                    <div class="project-info">
-                        <h3>Resume / Candidate Screening System</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">Future Interns — Remote Internship, Mar–Apr 2026</div>
-                        <div class="desc">
-                            An ML-powered resume screening and candidate ranking system built during 
-                            a remote internship. Uses NLP and transformer-based models for automated 
-                            candidate evaluation.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon/FUTURE_ML_01" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">Resume / Candidate Screening System</div>
+                <div class="pub-venue">Future Interns — Remote Internship, Mar–Apr 2026</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    An ML-powered resume screening and candidate ranking system built during 
+                    a remote internship. Uses NLP and transformer-based models for automated candidate evaluation.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/FUTURE_ML_02">Code</a>
                 </div>
+            </li>
 
-                <div class="project-card">
-                    <div class="project-thumb placeholder">Dueling DQN</div>
-                    <div class="project-info">
-                        <h3>Dueling DQN Implementation & RL Foundations</h3>
-                        <div class="authors"><em>Gideon Appau Amo</em></div>
-                        <div class="venue">2026 — Ongoing</div>
-                        <div class="desc">
-                            Hands-on implementation of Dueling DQN and reinforcement learning fundamentals 
-                            based on ARENA, UC Berkeley CS 285, and Spinning Up resources. 
-                            Exploring RL for LLM agents and mechanistic interpretability.
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/Amo-Gideon" target="_blank">Code →</a>
-                        </div>
-                    </div>
+            <li class="proj-item">
+                <div class="proj-title">RL Portfolio — Dueling DQN, PPO, A2C, VPG</div>
+                <div class="pub-venue">Reinforcement Learning / 2026</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    Hands-on implementation of Dueling DQN and modern RL algorithms 
+                    based on ARENA, UC Berkeley CS 285, and Spinning Up. 
+                    Exploring RL for LLM agents and mechanistic interpretability.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/rl-portfolio">Code</a>
                 </div>
+            </li>
 
-            </div>
-        </div>
+            <li class="proj-item">
+                <div class="proj-title">Weather Trend Forecasting</div>
+                <div class="pub-venue">Time Series / ML / 2025</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    Weather trend forecasting using time series analysis and ML models.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/weather-trend-forecasting">Code</a>
+                </div>
+            </li>
+
+            <li class="proj-item">
+                <div class="proj-title">AI Study Coach</div>
+                <div class="pub-venue">EdTech / NLP / 2024</div>
+                <p style="font-size:14px; color:var(--text-secondary); margin-bottom:6px;">
+                    An interactive AI-powered study assistant with personalized learning paths,
+                    quiz generation, and progress tracking using LLM-based techniques.
+                </p>
+                <div class="proj-links">
+                    <a href="https://github.com/Amo-Gideon/AI-Study-Coach">Code</a>
+                </div>
+            </li>
+
+        </ul>
     </section>
 
     <!-- Publications -->
     <section id="publications">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="pub-placeholder">Coming soon — publications in preparation.</div>
-        </div>
+        <h2>Publications</h2>
+        <p style="font-size:14px; color:var(--text-muted); font-style:italic;">Coming soon — publications in preparation.</p>
     </section>
 
     <!-- Experience -->
     <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-
-            <div class="timeline-item">
-                <div class="timeline-left">Mar – Apr 2026</div>
-                <div class="timeline-right">
+        <h2>Experience</h2>
+        <ul class="exp-list">
+            <li class="exp-item">
+                <div class="exp-date">Mar – Apr 2026</div>
+                <div class="exp-detail">
                     <h3>Machine Learning Intern</h3>
-                    <div class="institution">Future Interns (Remote)</div>
-                    <div class="detail">Built a Resume/Candidate Screening System using NLP and transformer models.</div>
+                    <div class="place">Future Interns (Remote)</div>
+                    <div class="desc">Built a Resume/Candidate Screening System using NLP and transformer models.</div>
                 </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-left">Nov 2022 – Aug 2023</div>
-                <div class="timeline-right">
+            </li>
+            <li class="exp-item">
+                <div class="exp-date">Nov 2022 – Aug 2023</div>
+                <div class="exp-detail">
                     <h3>IT Assistant</h3>
-                    <div class="institution">AAMUSTED — Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development</div>
-                    <div class="detail">Provided IT support, system maintenance, and technical assistance.</div>
+                    <div class="place">AAMUSTED — Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development</div>
+                    <div class="desc">Provided IT support, system maintenance, and technical assistance.</div>
                 </div>
-            </div>
-
-        </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Education -->
     <section id="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-
-            <div class="timeline-item">
-                <div class="timeline-left">2024 – 2027 (Expected)</div>
-                <div class="timeline-right">
+        <h2>Education</h2>
+        <ul class="edu-list">
+            <li class="edu-item">
+                <div class="edu-date">2024 – 2027 (Expected)</div>
+                <div class="edu-detail">
                     <h3>M.S. in Software Engineering (AI/ML)</h3>
-                    <div class="institution">University of Science and Technology of China (USTC)</div>
+                    <div class="place">University of Science and Technology of China (USTC)</div>
                 </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-left">2018 – 2022</div>
-                <div class="timeline-right">
+            </li>
+            <li class="edu-item">
+                <div class="edu-date">2018 – 2022</div>
+                <div class="edu-detail">
                     <h3>B.Sc. in Information Technology Education</h3>
-                    <div class="institution">University of Education, Winneba</div>
-                    <div class="detail">First Class Honors</div>
+                    <div class="place">University of Education, Winneba</div>
+                    <div class="desc">First Class Honors</div>
                 </div>
-            </div>
-
-        </div>
+            </li>
+        </ul>
     </section>
 
     <!-- Skills -->
     <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-
-            <div class="skill-category">
-                <h4>Languages</h4>
-                <div class="skill-list">Python, JavaScript, SQL, Java, Bash</div>
-            </div>
-            <div class="skill-category">
-                <h4>Frameworks & Libraries</h4>
-                <div class="skill-list">PyTorch, scikit-learn, Transformers (Hugging Face), LangChain, LangGraph, AutoGen, FAISS, Chroma, spaCy, NLTK</div>
-            </div>
-            <div class="skill-category">
-                <h4>Tools & Platforms</h4>
-                <div class="skill-list">Git, Docker, Linux, wandb, FastAPI, Streamlit, Jupyter, VS Code, LaTeX</div>
-            </div>
-            <div class="skill-category">
-                <h4>Cloud & GPU</h4>
-                <div class="skill-list">AutoDL, Google Cloud Shell, NVIDIA AI Endpoints, Remote GPU servers (4090/5090-class)</div>
-            </div>
+        <h2>Technical Skills</h2>
+        <div class="skill-row">
+            <strong>Languages:</strong> <span>Python, JavaScript, SQL, Java, Bash</span>
+        </div>
+        <div class="skill-row">
+            <strong>Frameworks & Libraries:</strong> <span>PyTorch, scikit-learn, Transformers (Hugging Face), LangChain, LangGraph, AutoGen, FAISS, Chroma, spaCy, NLTK</span>
+        </div>
+        <div class="skill-row">
+            <strong>Tools & Platforms:</strong> <span>Git, Docker, Linux, wandb, FastAPI, Streamlit, Jupyter, VS Code, LaTeX</span>
+        </div>
+        <div class="skill-row">
+            <strong>Cloud & GPU:</strong> <span>AutoDL, Google Cloud Shell, NVIDIA AI Endpoints, Remote GPU servers (4090/5090-class)</span>
         </div>
     </section>
 
     <!-- Certifications -->
     <section id="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications</h2>
-            <ul class="cert-list">
-                <li>NVIDIA — LLM RAG Agent Fundamentals <span class="year">2025</span></li>
-                <li>DeepLearning.AI — Advanced Learning Algorithms <span class="year">2025</span></li>
-                <li>DeepLearning.AI — Supervised Machine Learning <span class="year">2025</span></li>
-            </ul>
-        </div>
+        <h2>Certifications</h2>
+        <ul class="pub-list" style="font-size:14px; color:var(--text-secondary);">
+            <li class="pub-item" style="border-bottom:none; margin-bottom:8px; padding-bottom:0;">
+                NVIDIA — LLM RAG Agent Fundamentals <span style="color:var(--text-muted);">(2025)</span>
+            </li>
+            <li class="pub-item" style="border-bottom:none; margin-bottom:8px; padding-bottom:0;">
+                DeepLearning.AI — Advanced Learning Algorithms <span style="color:var(--text-muted);">(2025)</span>
+            </li>
+            <li class="pub-item" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+                DeepLearning.AI — Supervised Machine Learning <span style="color:var(--text-muted);">(2025)</span>
+            </li>
+        </ul>
     </section>
 
     <!-- News -->
     <section id="news">
-        <div class="container">
-            <h2 class="section-title">News</h2>
-            <div class="news-item">
-                <div class="news-date">May 2026</div>
-                <div class="news-text">Participated in the <strong>Lablab.ai Agentic Economy on Arc Hackathon</strong> — built Agent Prime with real USDC nanopayments.</div>
-            </div>
-            <div class="news-item">
-                <div class="news-date">Apr 2026</div>
-                <div class="news-text">Completed remote ML internship at <strong>Future Interns</strong> with a Resume/Candidate Screening System project.</div>
-            </div>
-            <div class="news-item">
-                <div class="news-date">2025</div>
-                <div class="news-text">Started Master's research on <strong>Class-Adaptive Focal SAM</strong> for long-tailed visual recognition.</div>
-            </div>
+        <h2>News</h2>
+        <div class="news-item">
+            <div class="news-date">May 2026</div>
+            <div class="news-text">Participated in the <strong>Lablab.ai Agentic Economy on Arc Hackathon</strong> — built Agent Prime with real USDC nanopayments.</div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">Apr 2026</div>
+            <div class="news-text">Completed remote ML internship at <strong>Future Interns</strong> with a Resume/Candidate Screening System project.</div>
+        </div>
+        <div class="news-item">
+            <div class="news-date">2025</div>
+            <div class="news-text">Started Master's research on <strong>Class-Adaptive Focal SAM</strong> for long-tailed visual recognition.</div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>© 2026 Gideon Appau Amo. All rights reserved.</p>
-            <p style="margin-top:6px;">Built with pure HTML & CSS. Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
-        </div>
+        <p>© 2026 Gideon Appau Amo</p>
+        <p style="margin-top:4px;">Built with pure HTML & CSS. Hosted on <a href="https://pages.github.com/">GitHub Pages</a>.</p>
     </footer>
+
+</div>
 
 </body>
 </html>
