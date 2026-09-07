@@ -15,12 +15,28 @@ sections:
         url: mailto:gideonamoappau@mail.ustc.edu.cn
         label: Contact Me
 
-  # About (auto-pulls from author profile)
-  - block: about.biography
+  # About / Biography (name, avatar, bio, education, interests + CV download)
+  - block: resume-biography-3
     id: about
     content:
-      title: About
       username: me
+      text: ''
+      button:
+        text: Download CV
+        url: uploads/resume.pdf
+      headings:
+        about: ''
+        education: ''
+        interests: ''
+    design:
+      background:
+        gradient_mesh:
+          enable: true
+      name:
+        size: md
+      avatar:
+        size: medium
+        shape: circle
 
   # Research Vision
   - block: markdown
