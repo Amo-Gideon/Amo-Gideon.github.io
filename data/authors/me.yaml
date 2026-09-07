@@ -1,0 +1,100 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Appau Gideon Kofi Amo
+  given: Gideon Kofi
+  family: Appau
+  alternate: ''
+  pronunciation: ''
+  pronouns: he/him
+postnominals:
+  - MS
+status:
+  icon: "☕️"
+role: M.S. Student in Software Engineering (AI/ML)
+bio: |
+  Appau Gideon Kofi Amo is an M.S. student in Software Engineering (AI/ML) at the
+  University of Science and Technology of China (USTC), advised by Pengkun Wang.
+  His research spans world models & embodied AI, reinforcement learning for LLM
+  agents, and efficient optimization for long-tailed visual recognition.
+
+affiliations:
+  - name: University of Science and Technology of China (USTC)
+    url: https://www.ustc.edu.cn/
+
+links:
+  - icon: at-symbol
+    url: mailto:gideonamoappau@mail.ustc.edu.cn
+    label: E-mail Me
+  - icon: brands/x
+    url: https://x.com/AmoAppau
+  - icon: brands/github
+    url: https://github.com/Amo-Gideon
+  - icon: brands/linkedin
+    url: https://linkedin.com/in/gideon-appau-022312212/
+
+interests:
+  - Efficient Optimization for Visual Recognition
+  - World Models & Embodied AI
+  - Reinforcement Learning
+  - Generative AI
+
+education:
+  - degree: M.S. in Software Engineering (AI/ML)
+    institution: University of Science and Technology of China (USTC)
+    start: 2025-09-01
+    end: 2027-06-30
+    summary: |
+      Research on class-adaptive sharpness-aware minimization for long-tailed
+      visual recognition, advised by Pengkun Wang.
+  - degree: B.Sc. in Information Technology Education
+    institution: University of Education, Winneba
+    start: 2018-09-01
+    end: 2022-06-30
+    summary: |
+      First Class Honors.
+
+experience:
+  - role: Researcher
+    org: University of Science and Technology of China (USTC)
+    org_url: https://www.ustc.edu.cn/
+    start: 2025-09-01
+    summary: |
+      M.S. research with advisor Pengkun Wang on class-adaptive sharpness-aware
+      minimization (CA-Focal-SAM) for long-tailed visual recognition.
+  - role: Machine Learning Intern
+    org: Future Interns
+    start: 2026-03-01
+    end: 2026-04-30
+    summary: |
+      Remote machine learning internship.
+  - role: IT Assistant
+    org: Akenten Appiah Menkah University
+    start: 2022-11-01
+    end: 2023-08-31
+    summary: |
+      IT support and systems administration.
+  - role: Full-Stack Developer Intern
+    org: Amidarr A-mole
+    start: 2021-08-01
+    end: 2022-03-31
+    summary: |
+      Full-stack web development internship.
+
+skills:
+  - name: Technical Skills
+    items:
+      - label: Python
+        level: 5
+      - label: PyTorch
+        level: 5
+      - label: Reinforcement Learning
+        level: 4
+      - label: LLM Agents & RAG
+        level: 4
+
+languages:
+  - name: English
+    level: 5
+    label: Native
