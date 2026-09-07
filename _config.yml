@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Appau Gideon Kofi Amo"
 title_separator          : "-"
 name                     : &name "Appau Gideon Kofi Amo"
-description              : &description "Academic portfolio of Appau Gideon Kofi Amo — efficient optimization for long-tailed visual recognition, world models, and embodied AI."
+description              : &description "Academic portfolio of Appau Gideon Kofi Amo - efficient optimization for long-tailed visual recognition, world models, and embodied AI."
 url                      : https://amo-gideon.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

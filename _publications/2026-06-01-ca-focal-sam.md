@@ -12,7 +12,7 @@ citation: 'Appau, Gideon Kofi Amo, and Wang, Pengkun. (2026). &quot;Class-Adapti
 
 Standard Sharpness-Aware Minimization applies a uniform perturbation to all classes and ignores how training-data scarcity changes optimization difficulty. CA-Focal-SAM instead adapts how class contributions enter the nominal and perturbed gradient components of SAM:
 
-* **GammaAdaptor** — just 2 learnable scalars map class frequency to per-class focal parameters, so rare classes receive a larger effective SAM weight.
-* **Quadratic perturbation-radius curriculum** — a smooth \\(\rho(t)\\) schedule that yields flatter minima, verified by Hessian spectral analysis (\\(\lambda_{\max}\\) 114.7 vs. Focal-SAM 121.4 via stochastic Lanczos quadrature).
+* **GammaAdaptor**: just 2 learnable scalars map class frequency to per-class focal parameters, so rare classes receive a larger effective SAM weight.
+* **Quadratic perturbation-radius curriculum**: a smooth \\(\rho(t)\\) schedule that yields flatter minima, verified by Hessian spectral analysis (\\(\lambda_{\max}\\) 114.7 vs. Focal-SAM 121.4 via stochastic Lanczos quadrature).
 
 Evaluated with a pre-registered multi-seed protocol (3 seeds, mean ± std) on CIFAR-10/100-LT, ImageNet-LT, and CUB-200-LT, with 20+ qualitative analyses (t-SNE embeddings, 2D/3D loss landscapes, confusion matrices). Code and experiment logs: [github.com/Amo-Gideon/sfca-ltr](https://github.com/Amo-Gideon/sfca-ltr).

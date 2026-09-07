@@ -1,6 +1,6 @@
 ---
 title: "RL Research Portfolio"
-excerpt: "Self-directed reinforcement-learning research: DQN reproductions from scratch, an end-to-end RLHF pipeline for a 0.5B language model, and a learned world model (MLP ensemble) with CEM planning that reaches 100% success on a PyBullet robot arm — and stays robust where PPO fails."
+excerpt: "Self-directed reinforcement-learning research: DQN reproductions from scratch, an end-to-end RLHF pipeline for a 0.5B language model, and a learned world model (MLP ensemble) with CEM planning that reaches 100% success on a PyBullet robot arm and stays robust where PPO fails."
 collection: portfolio
 ---
 
