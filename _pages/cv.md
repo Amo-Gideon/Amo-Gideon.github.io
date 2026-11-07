@@ -23,8 +23,8 @@ Work experience
 * 2025 - Present: Graduate Researcher
   * University of Science and Technology of China, Suzhou, China
   * Proposed CA-Focal-SAM, a class-adaptive sharpness-aware minimization optimizer that improves tail-class accuracy by 6.03% on CIFAR-10-LT (IR=200) with no architectural change or inference overhead; designed GammaAdaptor (2 learnable scalars) mapping class frequency to per-class focal parameters, and a quadratic perturbation-radius curriculum verified by Hessian spectral analysis.
-  * Proposed SFCA (Sharpness-Feedback Classwise Allocation), combining a static log-scarcity prior with an online per-class SAM ascent-gap signal (robust EMA + bounded sigmoid mapping); raises CIFAR-100-LT (IR=200, Logit Adjustment) tail accuracy from 22.45% to 24.49%, and achieves the strongest corrupted tail accuracy on CIFAR-100-C.
-  * Multi-seed statistical protocol (3 runs, mean +/- std) on CIFAR-10/100-LT, ImageNet-LT, CUB-200-LT; 20+ qualitative analyses (t-SNE, 2D/3D loss landscapes, confusion matrices).
+  * Proposed SFCA (Sharpness-Feedback Classwise Allocation), a closed-loop online controller that reallocates per-class sharpness using live geometric feedback; under a pre-specified falsification protocol (polarity under two outer losses, signal-destruction controls, hindsight-oracle bound, class-level regression) the feedback channel carried no measurable information - a rigorous negative boundary result. The frozen scarcity-prior controller improves CIFAR-100-LT tail accuracy over Focal-SAM by +2.50 points at IR=100 and +1.98 points at IR=200 (4 fixed seeds each, zero inference overhead).
+  * Multi-seed statistical protocol (~200 runs, uniform recipe, 4 seeds at IR=100/200) on CIFAR-100-LT; ImageNet-LT and Places-LT as exploratory screens; 20+ qualitative analyses (t-SNE, 2D/3D loss landscapes, confusion matrices).
 
 * Mar 2026 - Apr 2026: Machine Learning Intern
   * Future Interns (remote)

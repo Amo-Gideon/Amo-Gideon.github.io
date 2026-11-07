@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
-title                    : "Appau Gideon Kofi Amo"
+title                    : "Gideon Kofi Amo Appau"
 title_separator          : "-"
-name                     : &name "Appau Gideon Kofi Amo"
-description              : &description "Academic portfolio of Appau Gideon Kofi Amo - efficient optimization for long-tailed visual recognition, world models, and embodied AI."
+name                     : &name "Gideon Kofi Amo Appau"
+description              : &description "Academic portfolio of Gideon Kofi Amo Appau - reinforcement learning and world models, and optimizer-level methods for long-tailed visual recognition."
 url                      : https://amo-gideon.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -24,9 +24,9 @@ repository               : "Amo-Gideon/Amo-Gideon.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Appau Gideon Kofi Amo"
+  name             : "Gideon Kofi Amo Appau"
   pronouns         : # example: "she/her"  
-  bio              : "M.S. student at USTC working on optimizer-level methods for long-tailed visual recognition and on world models for decision-making."
+  bio              : "M.S. student at USTC working on reinforcement learning, world models, and optimizer-level methods for long-tailed visual recognition."
   location         : "Suzhou, China"
   employer         : "University of Science and Technology of China"
   uri              : # URL
